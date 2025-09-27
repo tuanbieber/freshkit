@@ -1,0 +1,45 @@
+.cta-section {
+  background: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta-main {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-section .cta-button {
+  background: white;
+  color: #4CAF50;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+.cta-section .cta-button:hover {
+  background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-main {
+    font-size: 2rem;
+  }
+}
