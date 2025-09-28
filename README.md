@@ -169,4 +169,4 @@ If you have any questions or need help, please open an issue or contact the deve
 
 ---
 
-Made with ❤️ by the FreshKit Team
+Made with ❤️ by the Tuan

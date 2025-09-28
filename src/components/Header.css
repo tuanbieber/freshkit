@@ -10,9 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 1rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 2rem;
 }
 
 .logo {
@@ -22,6 +23,10 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .logo-icon {
@@ -56,6 +61,7 @@
   cursor: pointer;
   font-size: inherit;
   font-family: inherit;
+  display: inline-block;
 }
 
 .nav-links a:hover,
@@ -66,11 +72,6 @@
 .nav-link.active {
   background-color: #4CAF50;
   color: white;
-}
-
-.logo {
-  cursor: pointer;
-  transition: opacity 0.3s ease;
 }
 
 .logo:hover {
@@ -139,6 +140,30 @@
   background: #45a049;
 }
 
+.search-container {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4CAF50;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -163,6 +188,13 @@
   
   .nav-links.nav-links-open {
     display: flex;
+  }
+  
+  .search-container {
+    order: -1;
+    width: 100%;
+    max-width: none;
+    margin: 0.5rem 0;
   }
   
   .mobile-menu-btn {

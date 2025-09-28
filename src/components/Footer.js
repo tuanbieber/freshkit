@@ -4,20 +4,20 @@ import './Footer.css';
 const Footer = () => {
   const footerSections = [
     {
-      title: 'Our Plans',
-      links: ['Our Plans', 'About Us', 'Our Menus', 'Cookbook and Recipes', 'Vegetarian Recipes']
+      title: 'Liên hệ',
+      links: ['Trụ sở chính', 'Nhà máy sản xuất', 'Số điện thoại', 'Email']
     },
     {
-      title: 'Help & Support',
-      links: ['Help Center', 'Contact', 'Gift Cards', 'FreshKit for Teams']
+      title: 'Dịch vụ',
+      links: ['Gói đăng ký', 'Thực đơn', 'Công thức nấu ăn', 'Hỗ trợ khách hàng']
     },
     {
-      title: 'Company',
-      links: ['Students', 'Blog', 'Recipes', 'Hero Discounts', 'Recipe Directory']
+      title: 'Công ty',
+      links: ['Giới thiệu', 'Tin tức', 'Tuyển dụng', 'Đối tác']
     },
     {
-      title: 'Legal',
-      links: ['Terms and Conditions', 'Privacy', 'Accessibility', 'California Supply Chains Act']
+      title: 'Pháp lý',
+      links: ['Điều khoản sử dụng', 'Chính sách bảo mật', 'Quyền riêng tư', 'Liên hệ pháp lý']
     }
   ];
 
@@ -39,7 +39,39 @@ const Footer = () => {
           ))}
         </div>
         <div className="footer-bottom">
-          <p>&copy; FreshKit 2025</p>
+          <div className="contact-info">
+            <div className="contact-item">
+              <div className="contact-icon">🏢</div>
+              <div className="contact-details">
+                <h4>Trụ sở chính</h4>
+                <p>TP. Hồ Chí Minh</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">🏭</div>
+              <div className="contact-details">
+                <h4>Nhà máy sản xuất</h4>
+                <p>TP. Hồ Chí Minh</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">📞</div>
+              <div className="contact-details">
+                <h4>Số điện thoại</h4>
+                <p><a href="tel:+84123456789">+84 123 456 789</a></p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">✉️</div>
+              <div className="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:info@freshkit.vn">info@freshkit.vn</a></p>
+              </div>
+            </div>
+          </div>
+          <div className="copyright">
+            <p>&copy; 2025 FreshKit. Tất cả quyền được bảo lưu.</p>
+          </div>
         </div>
       </div>
     </footer>

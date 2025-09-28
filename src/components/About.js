@@ -4,44 +4,50 @@ import './About.css';
 const About = () => {
   const teamMembers = [
     {
-      name: 'Nguyen Tan Dung',
-      role: 'CEO',
-      description: 'Award-winning chef with 15 years of experience in fine dining and meal planning.',
-      image: '👩‍🍳'
+      name: 'Nguyễn Tấn Dũng',
+      role: 'Giám đốc điều hành (CEO)',
+      description: 'Sinh viên Đại học Kinh tế TP.HCM (UEH) với niềm đam mê ẩm thực sâu sắc. Mong muốn lan tỏa giá trị tích cực và xây dựng cộng đồng thông qua việc chia sẻ tình yêu nấu ăn và kết nối mọi người.',
+      image: '👨‍🎓'
     },
-    {
-      name: 'Nguyen Thanh Ri',
-      role: 'CTO',
-      description: 'Registered dietitian specializing in balanced nutrition and healthy meal planning.',
-      image: '👨‍⚕️'
-    },
-    {
-      name: 'Nguyen Thanh To',
-      role: 'CPO',
-      description: 'Ensures fresh ingredients and timely delivery to your doorstep every week.',
-      image: '👩‍💼'
-    }
+      {
+        name: 'Nguyễn Thanh Tuấn',
+        role: 'Giám đốc công nghệ (CTO)',
+        description: 'Tốt nghiệp Đại học Bách Khoa TP.HCM chuyên ngành Khoa học Máy tính. Kiến trúc sư công nghệ xuất sắc với 5 năm kinh nghiệm xây dựng hệ thống phân tán quy mô lớn, phục vụ hàng triệu người dùng. Chuyên gia về Kubernetes, Golang, MySQL, Redis, Kafka, Distributed Systems. Đã giải quyết 1300+ bài LeetCode, chứng minh khả năng tư duy thuật toán và giải quyết vấn đề phức tạp.',
+        image: '👨‍💻'
+      },
+      {
+        name: 'Bạn 1 của Dũng',
+        role: 'Trưởng nhóm',
+        description: 'Sinh viên Đại học Kinh tế TP.HCM (UEH)',
+        image: '👨‍💻'
+      },
+      {
+        name: 'Bạn 2 của Dũng',
+        role: 'Thành viên',
+        description: 'Sinh viên Đại học Kinh tế TP.HCM (UEH)',
+        image: '👨‍💻'
+      },
   ];
 
   const values = [
     {
-      title: 'Fresh Ingredients',
-      description: 'We source the freshest, highest-quality ingredients from local farms and trusted suppliers.',
+      title: 'Nguyên liệu tươi ngon',
+      description: 'Chúng tôi lựa chọn những nguyên liệu tươi ngon, chất lượng cao từ các trang trại địa phương và nhà cung cấp uy tín.',
       icon: '🥬'
     },
     {
-      title: 'Chef-Curated Recipes',
-      description: 'Our professional chefs create delicious, balanced recipes that are easy to follow at home.',
+      title: 'Công thức từ đầu bếp chuyên nghiệp',
+      description: 'Các đầu bếp chuyên nghiệp của chúng tôi tạo ra những công thức ngon miệng, cân bằng dinh dưỡng và dễ thực hiện tại nhà.',
       icon: '👨‍🍳'
     },
     {
-      title: 'Convenience',
-      description: 'Pre-portioned ingredients and step-by-step instructions make cooking stress-free.',
+      title: 'Tiện lợi',
+      description: 'Nguyên liệu đã được chia phần sẵn và hướng dẫn từng bước giúp việc nấu ăn trở nên dễ dàng.',
       icon: '📦'
     },
     {
-      title: 'Sustainability',
-      description: 'We are committed to reducing food waste and using eco-friendly packaging.',
+      title: 'Bền vững',
+      description: 'Chúng tôi cam kết giảm thiểu lãng phí thực phẩm và sử dụng bao bì thân thiện với môi trường.',
       icon: '🌱'
     }
   ];
@@ -50,31 +56,31 @@ const About = () => {
     <section className="about" id="about">
       <div className="container">
         <div className="about-hero">
-          <h1>About FreshKit <br/> Made By Dung</h1>
+          <h1>Về FreshKit <br/> Được tạo bởi Dũng</h1>
           <p className="about-subtitle">
-            We're passionate about making home cooking accessible, enjoyable, and delicious for everyone.
+            Chúng tôi đam mê việc làm cho nấu ăn tại nhà trở nên dễ tiếp cận, thú vị và ngon miệng cho mọi người.
           </p>
         </div>
 
         <div className="about-story">
-          <h2>Our Story</h2>
+          <h2>Câu chuyện của chúng tôi</h2>
           <div className="story-content">
             <p>
-              FreshKit was born from a simple idea: everyone deserves to enjoy delicious, home-cooked meals 
-              without the stress of meal planning, grocery shopping, and ingredient portioning. Founded in 2020, 
-              we've been on a mission to make cooking accessible and enjoyable for busy families, cooking 
-              enthusiasts, and everyone in between.
+              FreshKit được sinh ra từ một ý tưởng đơn giản: mọi người đều xứng đáng được thưởng thức những bữa ăn 
+              ngon miệng, nấu tại nhà mà không cần lo lắng về việc lập kế hoạch bữa ăn, mua sắm thực phẩm và chia phần 
+              nguyên liệu. Được thành lập vào năm 2025, chúng tôi đã và đang thực hiện sứ mệnh làm cho việc nấu ăn 
+              trở nên dễ tiếp cận và thú vị cho các gia đình bận rộn, những người đam mê nấu ăn và tất cả mọi người.
             </p>
             <p>
-              What started as a small team of passionate chefs and food lovers has grown into a community 
-              of over 100,000 satisfied customers who trust us to deliver fresh ingredients and amazing 
-              recipes right to their doorsteps.
+              Từ một nhóm nhỏ những đầu bếp và người yêu ẩm thực đầy đam mê, chúng tôi đã phát triển thành một cộng đồng 
+              hơn 100.000 khách hàng hài lòng tin tưởng chúng tôi giao nguyên liệu tươi ngon và những công thức tuyệt vời 
+              tận nhà.
             </p>
           </div>
         </div>
 
         <div className="values-section">
-          <h2>Our Values</h2>
+          <h2>Giá trị của chúng tôi</h2>
           <div className="values-grid">
             {values.map((value, index) => (
               <div key={index} className="value-card">
@@ -87,7 +93,7 @@ const About = () => {
         </div>
 
         <div className="team-section">
-          <h2>Meet Our Team</h2>
+          <h2>Gặp gỡ đội ngũ của chúng tôi</h2>
           <div className="team-grid">
             {teamMembers.map((member, index) => (
               <div key={index} className="team-member">
@@ -101,34 +107,34 @@ const About = () => {
         </div>
 
         <div className="stats-section">
-          <h2>By the Numbers</h2>
+          <h2>Con số ấn tượng</h2>
           <div className="stats-grid">
             <div className="stat-item">
               <div className="stat-number">100K+</div>
-              <div className="stat-text">Happy Customers</div>
+              <div className="stat-text">Khách hàng hài lòng</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">500+</div>
-              <div className="stat-text">Recipes Created</div>
+              <div className="stat-text">Công thức đã tạo</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">50+</div>
-              <div className="stat-text">Partner Farms</div>
+              <div className="stat-text">Trang trại đối tác</div>
             </div>
             <div className="stat-item">
               <div className="stat-number">4.8★</div>
-              <div className="stat-text">Average Rating</div>
+              <div className="stat-text">Đánh giá trung bình</div>
             </div>
           </div>
         </div>
 
         <div className="mission-section">
-          <h2>Our Mission</h2>
+          <h2>Sứ mệnh của chúng tôi</h2>
           <p className="mission-text">
-            To inspire and empower people to cook delicious, healthy meals at home by providing 
-            fresh ingredients, chef-curated recipes, and the confidence to create amazing dishes 
-            in their own kitchens. We believe that cooking should be enjoyable, accessible, and 
-            bring people together around the dinner table.
+            Truyền cảm hứng và trao quyền cho mọi người nấu những bữa ăn ngon miệng, lành mạnh tại nhà 
+            bằng cách cung cấp nguyên liệu tươi ngon, công thức từ đầu bếp chuyên nghiệp và sự tự tin để 
+            tạo ra những món ăn tuyệt vời trong chính căn bếp của họ. Chúng tôi tin rằng nấu ăn nên là 
+            niềm vui, dễ tiếp cận và kết nối mọi người xung quanh bàn ăn.
           </p>
         </div>
       </div>

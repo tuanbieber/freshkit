@@ -3,9 +3,19 @@
   background: white;
 }
 
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 .about-hero {
   text-align: center;
   margin-bottom: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-hero h1 {
@@ -154,10 +164,12 @@
 }
 
 .stats-section {
-  background: #4CAF50;
+  background: linear-gradient(135deg, #81C784, #66BB6A);
   color: white;
   padding: 4rem 0;
   margin-bottom: 4rem;
+  border-radius: 20px;
+  margin: 0 2rem 4rem 2rem;
 }
 
 .stats-section h2 {
@@ -180,14 +192,24 @@
 }
 
 .stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.stat-item:first-child .stat-number {
+  color: #FFD700;
+  text-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  font-size: 3.2rem;
 }
 
 .stat-text {
   font-size: 1.1rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .mission-section {
