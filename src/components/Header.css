@@ -13,7 +13,7 @@
   padding: 1rem 2rem 1rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .logo {
@@ -44,8 +44,9 @@
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
+  flex-shrink: 1;
 }
 
 .nav-links a,
@@ -53,15 +54,16 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: inherit;
+  font-size: 0.9rem;
   font-family: inherit;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -140,10 +142,91 @@
   background: #45a049;
 }
 
+.loading-state {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loading-state::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ddd;
+  border-top: 2px solid #4CAF50;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* User Menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.user-greeting {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.logout-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logout-btn:hover {
+  background: #d32f2f;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
 .search-container {
-  flex: 1;
-  max-width: 300px;
-  margin: 0 1rem;
+  max-width: 200px;
+  position: relative;
+  flex-shrink: 1;
 }
 
 .search-input {
@@ -172,6 +255,22 @@
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .search-container {
+    max-width: 150px;
+  }
+  
+  .nav-links {
+    gap: 0.8rem;
+  }
+  
+  .nav-links a,
+  .nav-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 768px) {
   .nav {
     flex-wrap: wrap;
@@ -190,11 +289,28 @@
     display: flex;
   }
   
-  .search-container {
+  .header-right {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
     order: -1;
     width: 100%;
+  }
+  
+  .search-container {
+    width: 100%;
     max-width: none;
-    margin: 0.5rem 0;
+    margin: 0;
+  }
+  
+  .nav-links {
+    gap: 0.5rem;
+  }
+  
+  .nav-links a,
+  .nav-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
   }
   
   .mobile-menu-btn {
@@ -209,5 +325,26 @@
     box-shadow: none;
     background: #f8f9fa;
     margin-top: 0.5rem;
+  }
+  
+  .user-menu {
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+  }
+  
+  .user-greeting {
+    font-size: 0.75rem;
+    max-width: 100px;
+  }
+  
+  .user-avatar {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+  
+  .logout-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
   }
 }
