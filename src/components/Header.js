@@ -1,13 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import storageService from '../services/storage';
+import LoginModal from './LoginModal';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
+
+  // Check for existing session on component mount
+  useEffect(() => {
+    const checkSession = () => {
+      const isLoggedIn = storageService.checkSession();
+      const user = storageService.getCurrentUser();
+      setCurrentUser(user);
+      setIsLoading(false);
+    };
+    
+    checkSession();
+  }, []);
 
   const handleNavigation = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleLogin = (user) => {
+    setCurrentUser(user);
+    setShowLoginModal(false);
+    // Refresh session to extend expiration
+    storageService.refreshSession();
+  };
+
+  const handleLogout = () => {
+    storageService.logout();
+    setCurrentUser(null);
   };
 
   return (
@@ -56,15 +85,34 @@ const Header = () => {
           </Link>
         </div>
         
-        <div className="search-container">
-          <input 
-            type="text" 
-            placeholder="Thanh tìm kiếm chung cho toàn web" 
-            className="search-input"
-          />
+        <div className="header-right">
+          <div className="search-container">
+            <input 
+              type="text" 
+              placeholder="Tìm kiếm" 
+              className="search-input"
+            />
+          </div>
+          
+          {isLoading ? (
+            <div className="loading-state">Đang tải...</div>
+          ) : currentUser ? (
+            <div className="user-menu">
+              <span className="user-greeting">Xin chào, {currentUser.name}</span>
+              <div className="user-avatar">{currentUser.avatar}</div>
+              <button className="logout-btn" onClick={handleLogout}>
+                Đăng xuất
+              </button>
+            </div>
+          ) : (
+            <button 
+              className="login-btn"
+              onClick={() => setShowLoginModal(true)}
+            >
+              Đăng nhập
+            </button>
+          )}
         </div>
-        
-        <button className="login-btn">Đăng nhập</button>
         
         <button 
           className="mobile-menu-btn"
@@ -73,6 +121,12 @@ const Header = () => {
           ☰
         </button>
       </nav>
+
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+        onLogin={handleLogin}
+      />
     </header>
   );
 };

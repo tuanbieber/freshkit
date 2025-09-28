@@ -16,7 +16,7 @@ const About = () => {
         image: '👨‍💻'
       },
       {
-        name: 'Bạn 1 của Dũng',
+        name: 'Nhi',
         role: 'Trưởng nhóm',
         description: 'Sinh viên Đại học Kinh tế TP.HCM (UEH)',
         image: '👨‍💻'
