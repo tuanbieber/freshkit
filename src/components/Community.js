@@ -1,140 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import storageService from '../services/storage';
 import './Community.css';
 
 const Community = () => {
   const [showComments, setShowComments] = useState({});
   const [newComment, setNewComment] = useState({});
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      user: {
-        name: 'Nguyễn Thị Hoa',
-        avatar: '👩‍🍳',
-        verified: true
-      },
-      images: [
-        'https://tarasmulticulturaltable.com/wp-content/uploads/2013/06/Pho-Bo-Vietnamese-Beef-Noodle-Soup-2-of-3.jpg',
-        'https://vickypham.com/wp-content/uploads/2024/08/48f43-2023_06_09eosm506018.jpg',
-        'https://i.ytimg.com/vi/EpRBxau3ou0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDAAng9KhsIdSBRf06WkyMDn4708w'
-      ],
-      caption: 'Hôm nay làm món Phở Bò theo công thức FreshKit! 🍜 Nước dùng ngọt thanh, thịt bò mềm, rau thơm tươi. Cả nhà đều khen ngon! #FreshKit #PhoBo #CookingAtHome',
-      likes: 1247,
-      comments: 89,
-      timeAgo: '2 giờ trước',
-      liked: false,
-      commentsList: [
-        {
-          id: 1,
-          user: 'Lê Thị Lan',
-          avatar: '👩‍🍳',
-          text: 'Nhìn ngon quá! Công thức này ở đâu vậy chị?',
-          timeAgo: '1 giờ trước',
-          likes: 12
-        },
-        {
-          id: 2,
-          user: 'Phạm Đức Anh',
-          avatar: '👨‍🍳',
-          text: 'Tôi cũng đã thử làm theo FreshKit, rất dễ làm! 👍',
-          timeAgo: '45 phút trước',
-          likes: 8
-        },
-        {
-          id: 3,
-          user: 'Nguyễn Thị Hoa',
-          avatar: '👩‍🍳',
-          text: '@Lê Thị Lan Công thức có trên app FreshKit nhé!',
-          timeAgo: '30 phút trước',
-          likes: 5
-        }
-      ]
-    },
-    {
-      id: 2,
-      user: {
-        name: 'Trần Văn Minh',
-        avatar: '👨‍🍳',
-        verified: false
-      },
-      images: [
-        'https://www.andy-cooks.com/cdn/shop/articles/20250617054400-andy-20cooks-20-20pork-20veg-20and-20noodles-20recipe.jpg?v=1751674201&width=1600'
-      ],
-      caption: 'Lần đầu thử món Bún Chả theo hướng dẫn FreshKit! Thịt nướng thơm lừng, nước chấm chua ngọt vừa miệng. Cảm ơn FreshKit đã chia sẻ công thức tuyệt vời! 🔥',
-      likes: 892,
-      comments: 45,
-      timeAgo: '5 giờ trước',
-      liked: true,
-      commentsList: [
-        {
-          id: 1,
-          user: 'Võ Thị Lan',
-          avatar: '👩‍🍳',
-          text: 'Bún chả ngon lắm! Tôi cũng thích món này',
-          timeAgo: '3 giờ trước',
-          likes: 15
-        },
-        {
-          id: 2,
-          user: 'Nguyễn Văn Hùng',
-          avatar: '👨‍🍳',
-          text: 'Công thức FreshKit luôn đáng tin cậy!',
-          timeAgo: '2 giờ trước',
-          likes: 7
-        }
-      ]
-    },
-    {
-      id: 3,
-      user: {
-        name: 'Lê Thị Hương',
-        avatar: '👩‍🍳',
-        verified: true
-      },
-      images: [
-       'https://i.ytimg.com/vi/cJu6tFJe_Gc/maxresdefault.jpg',
-        'https://i.ytimg.com/vi/OVb5uoDWspM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBr9PBrWzDnhtJnXSXQB9hcHw6mnQ'
-      ],
-      caption: 'Cơm tấm sườn nướng - món ăn đặc sản miền Nam! Sườn nướng thơm, cơm tấm dẻo, chả trứng mềm. FreshKit giúp mình nấu ngon như nhà hàng! 🍚✨',
-      likes: 2156,
-      comments: 156,
-      timeAgo: '1 ngày trước',
-      liked: false
-    },
-    {
-      id: 4,
-      user: {
-        name: 'Phạm Đức Anh',
-        avatar: '👨‍🍳',
-        verified: false
-      },
-      images: [
-        'https://cdn2.fptshop.com.vn/unsafe/1920x0/filters:format(webp):quality(75)/2024_2_19_638439762164888519_cach-lam-banh-mi-pate-trung-7.jpg',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiC1rUnGZYsuPYf9WO6xSTSMSDuGfiuZn8Lcf8aXr3rb-c8nA9Hj8g7_jiF67eZpYPCIA&usqp=CAU',
-        'https://blog.dktcdn.net/files/cach-lam-banh-mi-pate-xuc-xich-ngon-de-ban.jpg'
-      ],
-      caption: 'Bánh mì pate - bữa sáng hoàn hảo! Pate tự làm thơm ngon, rau củ tươi giòn. FreshKit đã thay đổi cách mình nấu ăn! 🥖',
-      likes: 634,
-      comments: 23,
-      timeAgo: '2 ngày trước',
-      liked: true
-    },
-    {
-      id: 5,
-      user: {
-        name: 'Võ Thị Lan',
-        avatar: '👩‍🍳',
-        verified: true
-      },
-      images: [
-       'https://www.btaskee.com/wp-content/uploads/2023/09/cach-nau-che-dau-do-truyen-thong.jpg'
-      ],
-      caption: 'Chè đậu đỏ - món tráng miệng truyền thống! Đậu đỏ mềm ngọt, nước cốt dừa thơm béo. Cả nhà đều thích! 🍮 #CheDoDo #Dessert #FreshKit',
-      likes: 1789,
-      comments: 98,
-      timeAgo: '3 ngày trước',
-      liked: false
-    }
-  ]);
+  const [posts, setPosts] = useState([]);
+  const [currentUser] = useState(storageService.getCurrentUser());
+
+  useEffect(() => {
+    // Load posts from storage
+    const storedPosts = storageService.getPosts();
+    setPosts(storedPosts);
+  }, []);
 
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
