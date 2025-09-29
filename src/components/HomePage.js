@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 
 const HomePage = () => {
   const [isFaqOpen, setIsFaqOpen] = useState(null);
+  const navigate = useNavigate();
 
   const toggleFaq = (index) => {
     setIsFaqOpen(isFaqOpen === index ? null : index);
+  };
+
+  const handleSignUpClick = () => {
+    navigate('/goi-dang-ky');
   };
 
   const stats = [
@@ -142,7 +148,7 @@ const HomePage = () => {
       <section className="hero">
         <div className="hero-background">
           <img 
-            src="/hero-bg.png" 
+            src="/banner.jpg" 
             alt="Fresh ingredients and cooking" 
             className="hero-image"
             onLoad={() => console.log('Hero image loaded successfully')}
@@ -153,16 +159,7 @@ const HomePage = () => {
             }}
           />
           <div className="hero-overlay"></div>
-        </div>
-        <div className="container">
-          <h1>THE BEST WAY<br />TO COOK DINNER<br />DUNG NGUYEN</h1>
-          <p className="hero-subtitle">
-            <strong>NEW:</strong> ✓ 2x Healthier Recipes
-          </p>
-          <button className="cta-button">See Pricing & Plans</button>
-          <p className="hero-description">
-            Flexible plans. No commitment. Skip or cancel anytime.
-          </p>
+          <div className="hero-clickable-zone" onClick={handleSignUpClick}></div>
         </div>
       </section>
 

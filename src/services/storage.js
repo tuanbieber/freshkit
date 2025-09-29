@@ -14,7 +14,6 @@ class StorageService {
     this.loadPersistedData();
     this.loadSession();
   }
-
   // Data Persistence Management
   loadPersistedData() {
     try {
@@ -22,6 +21,12 @@ class StorageService {
       if (usersData) {
         this.data.users = JSON.parse(usersData);
         console.log('Loaded persisted users:', this.data.users.length);
+      }
+
+      const subscriptionsData = localStorage.getItem('freshkit_subscriptions');
+      if (subscriptionsData) {
+        this.data.subscriptions = JSON.parse(subscriptionsData);
+        console.log('Loaded persisted subscriptions:', this.data.subscriptions.length);
       }
     } catch (error) {
       console.error('Error loading persisted data:', error);
@@ -32,6 +37,9 @@ class StorageService {
     try {
       localStorage.setItem('freshkit_users', JSON.stringify(this.data.users));
       console.log('Saved users to localStorage:', this.data.users.length);
+      
+      localStorage.setItem('freshkit_subscriptions', JSON.stringify(this.data.subscriptions));
+      console.log('Saved subscriptions to localStorage:', this.data.subscriptions.length);
     } catch (error) {
       console.error('Error saving persisted data:', error);
     }
@@ -87,8 +95,10 @@ class StorageService {
     try {
       localStorage.removeItem('freshkit_session');
       localStorage.removeItem('freshkit_users');
+      localStorage.removeItem('freshkit_subscriptions');
       this.data.users = [];
       this.data.currentUser = null;
+      this.data.subscriptions = [];
       console.log('All data cleared');
     } catch (error) {
       console.error('Error clearing all data:', error);
@@ -322,6 +332,10 @@ class StorageService {
     };
     
     this.data.subscriptions.push(newSubscription);
+    
+    // Save to localStorage
+    this.savePersistedData();
+    
     return newSubscription;
   }
 
@@ -329,6 +343,10 @@ class StorageService {
     const subIndex = this.data.subscriptions.findIndex(s => s.id === subscriptionId);
     if (subIndex !== -1) {
       this.data.subscriptions[subIndex] = { ...this.data.subscriptions[subIndex], ...updates };
+      
+      // Save to localStorage
+      this.savePersistedData();
+      
       return this.data.subscriptions[subIndex];
     }
     return null;

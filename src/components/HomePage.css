@@ -13,13 +13,15 @@
 .hero {
   position: relative;
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 6rem 0;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .hero-background {
@@ -30,7 +32,6 @@
   height: 100%;
   z-index: 1;
   background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-  min-height: 80vh;
 }
 
 .hero-image {
@@ -51,8 +52,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent; /* Temporarily remove overlay to see image */
+  background: rgba(0, 0, 0, 0.3);
   z-index: 3;
+}
+
+.hero-clickable-zone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 4;
+  transition: background-color 0.3s ease;
+}
+
+.hero-clickable-zone:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .hero h1 {
