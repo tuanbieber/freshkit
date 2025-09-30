@@ -1,14 +1,29 @@
 .subscription-page {
-  padding: 4rem 0;
+  padding: 0;
   background: #f8f9fa;
   min-height: 80vh;
+}
+
+.subscription-banner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.subscription-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 400px;
 }
 
 .container {
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 2rem 4rem;
 }
 
 .subscription-header {
@@ -68,9 +83,7 @@
   border-color: #4CAF50;
 }
 
-.subscription-card.popular {
-  /* Remove default highlighting - cards should be equal by default */
-}
+/* Popular cards are equal by default - no special styling needed */
 
 .subscription-card.selected {
   border-color: #4CAF50;

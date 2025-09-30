@@ -1,160 +1,171 @@
 .footer {
   background: #333;
   color: white;
-  padding: 3rem 0 1rem;
+  padding: 2rem 0 1rem;
 }
 
 .footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+  gap: 2rem;
 }
 
-.footer-section h3 {
-  margin-bottom: 1rem;
+.footer-left h3 {
+  color: #4CAF50;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.footer-left p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-sections {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.footer-section h4 {
   color: #4CAF50;
   font-size: 1.1rem;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: white;
-}
-
-.footer-bottom {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #555;
-  color: #ccc;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .contact-info {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
-  border-color: rgba(76, 175, 80, 0.3);
+  align-items: center;
+  gap: 0.5rem;
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
 }
 
 .contact-icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  color: #4CAF50;
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(76, 175, 80, 0.1);
-  border-radius: 50%;
-  border: 1px solid rgba(76, 175, 80, 0.2);
+  margin-top: 0.1rem;
 }
 
 .contact-details {
   flex: 1;
 }
 
-.contact-details h4 {
+.contact-details strong {
   color: #4CAF50;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
-.contact-item:nth-child(2) .contact-details h4 {
-  font-size: 0.9rem;
+.contact-details span {
+  color: #ccc;
 }
 
-.contact-details p {
-  color: #e0e0e0;
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.contact-details a {
-  color: #e0e0e0;
+.contact-item a {
+  color: #ccc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-details a:hover {
+.contact-item a:hover {
   color: #4CAF50;
-  text-decoration: underline;
 }
 
-.copyright {
-  text-align: center;
+.payment-methods {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.payment-icon {
+  height: 30px;
+  width: auto;
+  border-radius: 4px;
+  background: white;
+  padding: 4px;
+  transition: transform 0.3s ease;
+}
+
+.payment-icon:hover {
+  transform: scale(1.05);
+}
+
+.app-stores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;  
+  align-items: flex-start;
+}
+
+.app-store-link {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.app-store-link:hover {
+  transform: scale(1.05);
+}
+
+.app-store-icon {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid #555;
+  text-align: center;
 }
 
 .copyright p {
   margin: 0;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 1024px) {
-  .contact-info {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
+  font-size: 0.85rem;
+  color: #999;
 }
 
 @media (max-width: 768px) {
   .footer-content {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .footer-sections {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
   }
   
   .contact-info {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 0.5rem;
+    align-items: center;
   }
   
   .contact-item {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.25rem;
+    justify-content: center;
   }
   
-  .contact-icon {
-    align-self: center;
-    margin-bottom: 0.5rem;
+  .payment-methods {
+    justify-content: center;
+  }
+  
+  .app-stores {
+    align-items: center;
   }
 }

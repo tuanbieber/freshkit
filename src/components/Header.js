@@ -9,7 +9,14 @@ const Header = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
   const location = useLocation();
+
+  // Update current path when location changes
+  useEffect(() => {
+    setCurrentPath(location.pathname);
+  }, [location.pathname]);
+
 
   // Check for existing session on component mount
   useEffect(() => {
@@ -39,8 +46,13 @@ const Header = () => {
     setCurrentUser(null);
   };
 
+  // Helper function to determine if a link is active
+  const isActive = (path) => {
+    return currentPath === path;
+  };
+
   return (
-    <header className="header">
+    <header className="header" key={location.pathname}>
       <nav className="nav">
         <Link to="/" className="logo" onClick={handleNavigation}>
           <div className="logo-icon">F</div>
@@ -50,35 +62,35 @@ const Header = () => {
         <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>
           <Link 
             to="/gioi-thieu"
-            className={`nav-link ${location.pathname === '/gioi-thieu' ? 'active' : ''}`}
+            className={`nav-link ${isActive('/gioi-thieu') ? 'active' : ''}`}
             onClick={handleNavigation}
           >
             Giới thiệu
           </Link>
           <Link 
             to="/thuc-don"
-            className={`nav-link ${location.pathname === '/thuc-don' ? 'active' : ''}`}
+            className={`nav-link ${isActive('/thuc-don') ? 'active' : ''}`}
             onClick={handleNavigation}
           >
             Thực đơn
           </Link>
           <Link 
             to="/goi-dang-ky"
-            className={`nav-link ${location.pathname === '/goi-dang-ky' ? 'active' : ''}`}
+            className={`nav-link ${isActive('/goi-dang-ky') ? 'active' : ''}`}
             onClick={handleNavigation}
           >
             Gói đăng ký
           </Link>
           <Link 
             to="/cong-dong"
-            className={`nav-link ${location.pathname === '/cong-dong' ? 'active' : ''}`}
+            className={`nav-link ${isActive('/cong-dong') ? 'active' : ''}`}
             onClick={handleNavigation}
           >
             Cộng đồng
           </Link>
           <Link 
             to="/doi-tac"
-            className={`nav-link ${location.pathname === '/doi-tac' ? 'active' : ''}`}
+            className={`nav-link ${isActive('/doi-tac') ? 'active' : ''}`}
             onClick={handleNavigation}
           >
             Đối tác

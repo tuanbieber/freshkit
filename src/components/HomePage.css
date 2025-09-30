@@ -14,9 +14,9 @@
   position: relative;
   color: white;
   text-align: left;
-  padding: 6rem 0;
+  padding: 0;
   overflow: hidden;
-  min-height: 60vh;
+  height: 400px;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -370,28 +370,39 @@
 
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto 4rem;
 }
 
 .benefit {
-  text-align: center;
+  background: white;
   padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
 .benefit h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #4CAF50;
   font-weight: 600;
 }
 
 .benefit p {
   color: #666;
-  line-height: 1.6;
-  font-size: 1.1rem;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .benefits-cta {
@@ -619,6 +630,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero {
+    height: 250px;
+  }
+  
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -650,6 +665,19 @@
   
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .benefit {
+    padding: 1.5rem;
+  }
+  
+  .benefit h3 {
+    font-size: 1.2rem;
+  }
+  
+  .benefit p {
+    font-size: 0.9rem;
   }
   
   .cta-main {

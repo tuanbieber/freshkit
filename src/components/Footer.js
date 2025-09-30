@@ -2,76 +2,68 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
-  const footerSections = [
-    {
-      title: 'Liên hệ',
-      links: ['Trụ sở chính', 'Nhà máy sản xuất', 'Số điện thoại', 'Email']
-    },
-    {
-      title: 'Dịch vụ',
-      links: ['Gói đăng ký', 'Thực đơn', 'Công thức nấu ăn', 'Hỗ trợ khách hàng']
-    },
-    {
-      title: 'Công ty',
-      links: ['Giới thiệu', 'Tin tức', 'Tuyển dụng', 'Đối tác']
-    },
-    {
-      title: 'Pháp lý',
-      links: ['Điều khoản sử dụng', 'Chính sách bảo mật', 'Quyền riêng tư', 'Liên hệ pháp lý']
-    }
-  ];
-
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          {footerSections.map((section, index) => (
-            <div key={index} className="footer-section">
-              <h3>{section.title}</h3>
-              <ul>
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
-                  </li>
-                ))}
-              </ul>
+          <div className="footer-left">
+            <h3>PrepJoy</h3>
+            <p>Nền tảng đồ ăn sơ chế sẵn lành mạnh hàng đầu Việt Nam</p>
+          </div>
+          <div className="footer-sections">
+            <div className="footer-section">
+              <h4>Liên hệ</h4>
+              <div className="contact-info">
+                <div className="contact-item">
+                  <span className="contact-icon">🏢</span>
+                  <div className="contact-details">
+                    <strong>Trụ sở chính:</strong> 279, Nguyễn Tri Phương, phường Diên Hồng, TP Hồ Chí Minh
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">🏭</span>
+                  <div className="contact-details">
+                    <strong>Nhà máy sản xuất:</strong> 279, Nguyễn Tri Phương, phường Diên Hồng, TP Hồ Chí Minh
+                  </div>
+                </div>  
+                <div className="contact-item">
+                  <span className="contact-icon">📞</span>
+                  <div className="contact-details">
+                    <strong>Số điện thoại:</strong> <a href="tel:+84123456789">(+84) 123 456 789</a>
+                  </div>
+                </div>
+                <div className="contact-item">
+                  <span className="contact-icon">✉️</span>
+                  <div className="contact-details">
+                    <strong>Email:</strong> <a href="mailto:info@prepjoy.com.vn">info@prepjoy.com.vn</a>
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
+            <div className="footer-section">
+              <h4>Phương thức thanh toán</h4>
+              <div className="payment-methods">
+                <img src="/payment-visa.webp" alt="Visa" className="payment-icon" />
+                <img src="/payment-mastercard.jpg" alt="Mastercard" className="payment-icon" />
+                <img src="/payment-paypal.png" alt="PayPal" className="payment-icon" />
+                <img src="/payment-momo.webp" alt="MoMo" className="payment-icon" />
+              </div>
+            </div>
+            <div className="footer-section">
+              <h4>Tải ứng dụng</h4>
+              <div className="app-stores">
+                <a href="#" className="app-store-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Store" className="app-store-icon" />
+                </a>
+                <a href="#" className="app-store-link">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="app-store-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="footer-bottom">
-          <div className="contact-info">
-            <div className="contact-item">
-              <div className="contact-icon">🏢</div>
-              <div className="contact-details">
-                <h4>Trụ sở chính</h4>
-                <p>TP. Hồ Chí Minh</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">🏭</div>
-              <div className="contact-details">
-                <h4>Nhà máy sản xuất</h4>
-                <p>TP. Hồ Chí Minh</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">📞</div>
-              <div className="contact-details">
-                <h4>Số điện thoại</h4>
-                <p><a href="tel:+84123456789">+84 123 456 789</a></p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">✉️</div>
-              <div className="contact-details">
-                <h4>Email</h4>
-                <p><a href="mailto:info@freshkit.vn">info@freshkit.vn</a></p>
-              </div>
-            </div>
-          </div>
-          <div className="copyright">
-            <p>&copy; 2025 FreshKit. Tất cả quyền được bảo lưu.</p>
-          </div>
+          <p>&copy; 2025 FreshKit. Tất cả quyền được bảo lưu.</p>
         </div>
       </div>
     </footer>

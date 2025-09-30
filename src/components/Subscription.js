@@ -169,19 +169,17 @@ const Subscription = () => {
       buttonClass: 'btn-free',
       headerClass: 'header-free',
       features: [
-        'Công cụ lập kế hoạch bữa ăn cơ bản',
-        '50+ công thức nấu ăn miễn phí',
-        'Gợi ý thực đơn hàng tuần',
-        'Theo dõi dinh dưỡng cơ bản',
-        'Tạo danh sách mua sắm',
-        'Hỗ trợ cộng đồng',
-        'Truy cập ứng dụng di động',
-        '2GB lưu trữ'
+        'Bộ lọc thông tin tiện lợi trong quá trình tìm kiếm món ăn',
+        'Tính năng theo dõi dinh dưỡng cơ bản từ chế độ ăn',
+        'Công thức nấu ăn tích hợp trực tuyến thông qua mã QR trên bao bì',
+        'Chính sách giao hàng tiêu chuẩn với chi phí tiết kiệm thông qua đơn vị vận chuyển đối tác',
+        'Theo dõi trạng thái đơn hàng tích hợp trong cùng ứng dụng',
+        'Chia sẻ, tương tác với cộng đồng người dùng có cùng sở thích'
       ]
     },
     {
       id: 'pro',
-      name: 'Premium',
+      name: 'PrepJoy Member',
       subtitle: 'For one person',
       description: 'Mở khóa các tính năng cao cấp, cá nhân hóa trải nghiệm và hướng dẫn dinh dưỡng chuyên nghiệp.',
       price: '1,200,000',
@@ -193,27 +191,27 @@ const Subscription = () => {
       isPopular: false,
       features: [
         'Tất cả tính năng Free, cộng thêm:',
-        'Cung cấp voucher giảm giá trực tiếp trên giá box, phí vận chuyển',
-        'Cá nhân hóa trải nghiệm người dùng: gợi ý thực đơn các bữa ăn trong tuần',
-        'Tải các video hướng dẫn nấu ăn ngoại tuyến trên app',
-        '500+ công thức cao cấp',
-        'Kế hoạch bữa ăn cá nhân hóa',
-        'Theo dõi dinh dưỡng nâng cao',
-        'Gợi ý thông minh bằng AI',
-        'Hỗ trợ khách hàng ưu tiên',
-        'Lưu trữ không giới hạn',
-        'Xuất kế hoạch bữa ăn',
-        'Chia sẻ gia đình (tối đa 4 người)',
-        'Lớp học nấu ăn độc quyền',
-        'Tùy chỉnh chế độ ăn uống',
-        'Phân tích nâng cao'
+        'Chiết khấu sâu & Quà tặng đặc biệt cho Đơn hàng Lớn',
+        'Nhận ngay voucher giảm giá trực tiếp lên đến 20% khi bạn đặt các đơn hàng có giá trị từ 290.000 VNĐ trở lên',
+        'PrepJoy Member còn được tặng kèm các món quà nhỏ theo mùa với đơn hàng số lượng lớn',
+        'Ưu đãi Sinh nhật Tri ân Đặc biệt - mã giảm giá cộng dồn 5%',
+        'Miễn phí Giao hàng Tận nơi trong bán kính 5km',
+        'Miễn phí vận chuyển hoàn toàn đối với các đơn hàng từ 149.000 VNĐ trong bán kính 15km',
+        'Shipping Voucher giảm 30% (tối đa 25.000 VNĐ) cho phạm vi vượt quá 15km',
+        'Gợi Ý Thực Đơn Tối Ưu dựa trên lịch sử mua hàng và thông tin cá nhân',
+        'Video Hướng Dẫn Nấu Ăn Ngoại Tuyến có thể tải về và xem không cần internet'
       ]
     }
   ];
 
   return (
     <div className="subscription-page">
+      <div className="subscription-banner">
+        <img src="/member-banner.png" alt="Member Banner" />
+      </div>
       <div className="container">
+        <div> <br/> </div>
+
         <div className="subscription-header">
           <h1>Chọn Gói Của Bạn</h1>
           <p>Bắt đầu hành trình ăn uống lành mạnh với FreshKit. Hủy bất cứ lúc nào.</p>
@@ -275,10 +273,6 @@ const Subscription = () => {
             </div>
             );
           })}
-        </div>
-        
-        <div className="subscription-footer">
-          <p>Tất cả gói đều bao gồm bảo đảm hoàn tiền trong 30 ngày</p>
         </div>
       </div>
 

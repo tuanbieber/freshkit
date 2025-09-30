@@ -31,56 +31,62 @@ const About = () => {
 
   const values = [
     {
-      title: 'Nguyên liệu tươi ngon',
-      description: 'Chúng tôi lựa chọn những nguyên liệu tươi ngon, chất lượng cao từ các trang trại địa phương và nhà cung cấp uy tín.',
-      icon: '🥬'
+      title: 'Đặt hàng tiện lợi',
+      description: 'Giao diện trực quan với bộ lọc chi tiết, mức đánh giá chất lượng từng sản phẩm, và cho phép tùy chỉnh khung giờ giao hàng linh hoạt',
+      icon: '📱'
     },
     {
-      title: 'Công thức từ đầu bếp chuyên nghiệp',
-      description: 'Các đầu bếp chuyên nghiệp của chúng tôi tạo ra những công thức ngon miệng, cân bằng dinh dưỡng và dễ thực hiện tại nhà.',
-      icon: '👨‍🍳'
+      title: 'Tiết kiệm thời gian',
+      description: 'Hoàn thiện bữa ăn nhanh gọn, hỗ trợ đặt hàng trước cho cả tuần/tháng và giao hàng nhanh sau khi đặt',
+      icon: '⏰'
     },
     {
-      title: 'Tiện lợi',
-      description: 'Nguyên liệu đã được chia phần sẵn và hướng dẫn từng bước giúp việc nấu ăn trở nên dễ dàng.',
-      icon: '📦'
+      title: 'Tối ưu hóa chi phí',
+      description: 'Mức giá tiết kiệm hơn so với món chế biến sẵn, tối ưu hóa chi phí vận chuyển nhờ liên kết đối tác cố định',
+      icon: '💰'
     },
     {
-      title: 'Bền vững',
-      description: 'Chúng tôi cam kết giảm thiểu lãng phí thực phẩm và sử dụng bao bì thân thiện với môi trường.',
-      icon: '🌱'
+      title: 'Đảm bảo dinh dưỡng cá nhân hóa và chính xác',
+      description: 'Đa dạng chế độ ăn chuyên biệt với chỉ số dinh dưỡng rõ ràng',
+      icon: '🥗'
     }
   ];
 
   return (
     <section className="about" id="about">
+      {/* Banner Image */}
+      <div className="about-banner">
+        <img 
+          src="/gioi-thieu-banner.png" 
+          alt="Giới thiệu PrepJoy" 
+          className="banner-image"
+        />
+      </div>
+
+      <div>
+        <br/>
+        <br/>
+      </div>
+      
       <div className="container">
         <div className="about-hero">
-          <h1>Về FreshKit <br/> Được tạo bởi Dũng</h1>
+          <h1>Tầm nhìn </h1>
           <p className="about-subtitle">
-            Chúng tôi đam mê việc làm cho nấu ăn tại nhà trở nên dễ tiếp cận, thú vị và ngon miệng cho mọi người.
+          Chúng tôi mong muốn trở thành nền tảng hàng đầu tại Việt Nam về các sản phẩm đồ ăn sơ chế sẵn lành mạnh, mang đến giá trị vượt trội cho người tiêu dùng.
           </p>
         </div>
 
         <div className="about-story">
-          <h2>Câu chuyện của chúng tôi</h2>
+          <h2>Sứ mệnh</h2>
           <div className="story-content">
             <p>
-              FreshKit được sinh ra từ một ý tưởng đơn giản: mọi người đều xứng đáng được thưởng thức những bữa ăn 
-              ngon miệng, nấu tại nhà mà không cần lo lắng về việc lập kế hoạch bữa ăn, mua sắm thực phẩm và chia phần 
-              nguyên liệu. Được thành lập vào năm 2025, chúng tôi đã và đang thực hiện sứ mệnh làm cho việc nấu ăn 
-              trở nên dễ tiếp cận và thú vị cho các gia đình bận rộn, những người đam mê nấu ăn và tất cả mọi người.
-            </p>
-            <p>
-              Từ một nhóm nhỏ những đầu bếp và người yêu ẩm thực đầy đam mê, chúng tôi đã phát triển thành một cộng đồng 
-              hơn 100.000 khách hàng hài lòng tin tưởng chúng tôi giao nguyên liệu tươi ngon và những công thức tuyệt vời 
-              tận nhà.
+            PrepJoy cam kết giúp khách hàng nấu ăn dễ dàng, nhanh chóng nhưng vẫn đáp ứng nhu cầu dinh dưỡng chuyên biệt phù hợp với từng mục tiêu sức khỏe.
             </p>
           </div>
         </div>
 
         <div className="values-section">
-          <h2>Giá trị của chúng tôi</h2>
+          <h2>Giá trị cốt lõi</h2>
           <div className="values-grid">
             {values.map((value, index) => (
               <div key={index} className="value-card">
@@ -92,49 +98,27 @@ const About = () => {
           </div>
         </div>
 
-        <div className="team-section">
-          <h2>Gặp gỡ đội ngũ của chúng tôi</h2>
-          <div className="team-grid">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="team-member">
-                <div className="member-image">{member.image}</div>
-                <h3>{member.name}</h3>
-                <p className="member-role">{member.role}</p>
-                <p className="member-description">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="stats-section">
-          <h2>Con số ấn tượng</h2>
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">100K+</div>
-              <div className="stat-text">Khách hàng hài lòng</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
-              <div className="stat-text">Công thức đã tạo</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">50+</div>
-              <div className="stat-text">Trang trại đối tác</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">4.8★</div>
-              <div className="stat-text">Đánh giá trung bình</div>
-            </div>
-          </div>
-        </div>
-
         <div className="mission-section">
-          <h2>Sứ mệnh của chúng tôi</h2>
+          <h2>Câu chuyện thành lập</h2>
           <p className="mission-text">
-            Truyền cảm hứng và trao quyền cho mọi người nấu những bữa ăn ngon miệng, lành mạnh tại nhà 
-            bằng cách cung cấp nguyên liệu tươi ngon, công thức từ đầu bếp chuyên nghiệp và sự tự tin để 
-            tạo ra những món ăn tuyệt vời trong chính căn bếp của họ. Chúng tôi tin rằng nấu ăn nên là 
-            niềm vui, dễ tiếp cận và kết nối mọi người xung quanh bàn ăn.
+            PrepJoy bắt đầu từ một câu hỏi rất đời thường<br />
+            <strong>"Tại sao nấu ăn lại phải mất quá nhiều thời gian, trong khi ai cũng đang bận rộn với cuộc sống của họ?"</strong>
+          </p>
+
+          <p>
+            Người sáng lập PrepJoy từng là một nhân viên văn phòng bận rộn, ngày nào cũng quay cuồng giữa công việc, cuộc sống và những bữa ăn vội vàng. Việc gọi đồ ăn ngoài vừa tốn kém, vừa thiếu kiểm soát về dinh dưỡng. Còn nấu ăn ở nhà thì lại mất công đi chợ, sơ chế, dọn dẹp. Quá nhiều bước khiến việc nấu nướng trở thành gánh nặng thay vì niềm vui.
+          </p>
+
+          <p>
+            Từ chính nhu cầu thực tế đó, ý tưởng về một dịch vụ đặt đồ ăn thông minh với nguyên liệu tươi ngon đã được chuẩn bị sẵn cùng hướng dẫn nấu ăn dễ hiểu ra đời. Mục tiêu không chỉ là giúp mọi người tiết kiệm thời gian, công sức và đảm bảo chế độ ăn uống mà còn giữ lại niềm vui tự tay nấu ăn và nâng cao sức khỏe của bản thân.
+          </p>
+
+          <p>
+            Sau hàng trăm giờ thử nghiệm công thức, làm việc với các đầu bếp, chuyên gia dinh dưỡng và chọn lọc các đơn vị cung cấp nguyên liệu uy tín trên thị trường, PrepJoy chính thức ra đời.
+          </p>
+
+          <p className="mission-text">
+            <strong>Chúng tôi tin rằng: Mỗi người đều xứng đáng có những bữa ăn ngon – dù bận rộn đến đâu. Và hành trình đó bắt đầu từ chính căn bếp của bạn, với sự đồng hành của PrepJoy.</strong>
           </p>
         </div>
       </div>

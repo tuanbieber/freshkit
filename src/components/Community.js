@@ -87,10 +87,20 @@ const Community = () => {
 
   return (
     <div className="community-page">
+      <div className="community-banner">
+        <img src="/member-banner.png" alt="Community Banner" />
+      </div>
       <div className="container">
         <div className="community-header">
-          <h1>Cộng đồng FreshKit</h1>
-          <p>Chia sẻ niềm vui nấu ăn cùng cộng đồng</p>
+          <div className="community-description">
+            <h2>"Khoảnh khắc bếp của bạn"</h2>
+            <p>
+              Bạn có muốn mọi người trầm trồ trước món ăn mình vừa thực hiện? Đây là nơi chúng ta cùng nhau khoe những "tác phẩm" đã ra lò, những khoảnh khắc vui vẻ khi vào bếp. Nơi để việc nấu ăn ngon với với PrepJoy là dễ dàng và thú vị đến mức nào!
+            </p>
+            <p>
+              PrepJoy mong muốn thấy thành quả của bạn! Hãy chia sẻ hình ảnh món ăn đã hoàn thành, tag công thức hoặc kit thực phẩm bạn đã sử dụng. Mỗi bài đăng đều giúp những khách hàng khác có thêm động lực vào bếp và giúp chúng tôi hoàn thiện hơn sản phẩm của mình!
+            </p>
+          </div>
         </div>
 
         <div className="posts-container">

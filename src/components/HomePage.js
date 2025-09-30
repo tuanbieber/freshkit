@@ -15,39 +15,39 @@ const HomePage = () => {
   };
 
   const stats = [
-    {
-      number: '91%',
-      text: 'of our customers feel healthier with a FreshKit subscription'
-    },
-    {
-      number: '93%',
-      text: 'of our customers feel less stressed at dinner time'
-    },
-    {
-      number: '98%',
-      text: 'of our customers save time on meals'
-    }
+    // {
+    //   number: '92221%',
+    //   text: 'of our customers feel healthier with a FreshKit subscription'
+    // },
+    // {
+    //   number: '93%',
+    //   text: 'of our customers feel less stressed at dinner time'
+    // },
+    // {
+    //   number: '98%',
+    //   text: 'of our customers save time on meals'
+    // }
   ];
 
   const processSteps = [
     {
       number: 1,
-      title: 'Pick your meals',
-      description: 'Browse and choose from 100+ chef-curated recipes and market add-ons from our food subscription each week.',
+      title: 'Bước 1: Chọn bữa ăn của bạn',
+      description: 'Duyệt và lựa chọn từ hơn 100 công thức nấu ăn do đầu bếp',
       image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
       video: null
     },
     {
       number: 2,
-      title: 'Ingredients arrive fresh',
-      description: 'Fresh, portioned ingredients and step-by-step recipes are delivered right to your door in a convenient meal box.',
+      title: 'Tiến hành đặt hàng',
+      description: 'Nguyên liệu tươi ngon, được chia theo khẩu phần và công thức nấu ăn từng bước sẽ được PrepJoy chuẩn bị và giao đến bạn.',
       image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
       video: null
     },
     {
       number: 3,
-      title: 'Cook with confidence',
-      description: 'Follow simple instructions and enjoy delicious, home-cooked meals, without the stress.',
+      title: 'Trổ tài cùng PrepJoy',
+      description: 'Làm theo hướng dẫn từ bộ công thức, đăng tải hình ảnh thành quả tại <strong>PrepJoy Home Chef</strong> và thưởng thức những bữa ăn ngon do chính tay mình làm ra.',
       image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
       video: null
     }
@@ -55,55 +55,51 @@ const HomePage = () => {
 
   const mealPlans = [
     {
-      title: 'MEAT & VEGGIES',
-      subtitle: 'OUR MOST POPULAR PLAN',
+      title: 'Eat Clean',
+      subtitle: 'Ghi gì vào đây',
       icon: '🥩',
       image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop&crop=center'
     },
     {
-      title: 'VEGGIE',
-      subtitle: '& PLANT-BASED MEALS',
+      title: 'Flexitarian',
+      subtitle: 'Ghi gì vào đây',
       icon: '🥬',
       image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop&crop=center'
     },
     {
-      title: 'FAMILY MENU',
-      subtitle: 'KID-TESTED RECIPES',
+      title: 'Low Fat, Low Carb',
+      subtitle: 'Ghi gì vào đây',
       icon: '👨‍👩‍👧‍👦',
       image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=300&fit=crop&crop=center'
     },
     {
-      title: 'FIT & WHOLESOME',
-      subtitle: 'FOR A BALANCED LIFESTYLE',
+      title: 'Keto',
+      subtitle: 'Ghi gì vào đây',
       icon: '💪',
       image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop&crop=center'
     },
-    {
-      title: 'QUICK & EASY',
-      subtitle: 'FOR BUSY WEEKNIGHTS',
-      icon: '⚡',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop&crop=center'
-    },
-    {
-      title: 'PESCATARIAN',
-      subtitle: 'SEAFOOD & VEGGIE MEALS',
-      icon: '🐟',
-      image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=300&fit=crop&crop=center'
-    }
   ];
 
   const benefits = [
     {
-      title: 'Eat fresh, feel good',
-      description: 'Meal kits with portioned, seasonal ingredients mean less waste and more flavor.'
+      title: 'Quỳnh Nhi',
+      description: 'PrepJoy đã giúp mình tiết kiệm được rất nhiều thời gian khi nấu ăn.'
     },
     {
-      title: 'Cook with confidence',
-      description: 'Step-by-step recipes make dinner feel doable, no matter your skill level.'
+      title: 'Đan Trâm',
+      description: 'Siêu dễ nấu luôn! Bé nhà mình rất thích!'
     },
     {
-      title: 'Healthier made easier',
-      description: 'Choose from Calorie Smart, Protein Smart, and veggie-packed meals that support your goals.'
+      title: 'Tường Vi',
+      description: 'Từ ngày có PrepJoy, mình siêng nấu ăn hẳn!'
+    },
+    {
+      title: 'Dũng Nguyễn',
+      description: 'Hướng dẫn nấu ăn rất chi tiết. Nhờ có PrepJoy mà mình đã ghi điểm với cô ấy.'
+    },
+    {
+      title: 'Diệp Huỳnh',
+      description: 'Mình rất thích!'
     }
   ];
 
@@ -166,7 +162,7 @@ const HomePage = () => {
       {/* Stats Section */}
       <section className="stats">
         <div className="container">
-          <h2>Whatever your week looks like,<br />dinner's covered.</h2>
+          <h2>“PrepJoy – Giải pháp bữa ăn thông minh cho cuộc sống bận rộn”</h2>
           <div className="stats-grid">
             {stats.map((stat, index) => (
               <div key={index} className="stat-item">
@@ -181,7 +177,7 @@ const HomePage = () => {
       {/* Process Section */}
       <section className="process">
         <div className="container">
-          <h2>Dinner's easy as 1, 2, 3</h2>
+          <h2>“Bữa ăn dinh dưỡng với 3 bước đơn giản cùng PrepJoy”</h2>
           <div className="process-steps">
             {processSteps.map((step, index) => (
               <div key={index} className="step">
@@ -211,12 +207,12 @@ const HomePage = () => {
                   <div className="step-number-overlay">{step.number}</div>
                 </div>
                 <h3>{step.title}</h3>
-                <p>{step.description}</p>
+                <p dangerouslySetInnerHTML={{ __html: step.description }}></p>
               </div>
             ))}
           </div>
           <div className="process-cta">
-            <button className="cta-button">See Pricing & Plans</button>
+            <button className="cta-button" onClick={() => navigate('/goi-dang-ky')}>Đăng ký ngay!</button>
           </div>
         </div>
       </section>
@@ -224,8 +220,8 @@ const HomePage = () => {
       {/* Meal Plans Section */}
       <section className="meal-plans">
         <div className="container">
-          <h2>Make it match your taste— now with 100+ weekly recipes.</h2>
-          <p className="meal-plans-subtitle">YUM!<br />Choose your meals after signing-up</p>
+          <h2>Một số món ăn nổi bật của các chế độ ăn</h2>
+          <p className="meal-plans-subtitle">Hơn 100 công thức dinh dưỡng</p>
           <div className="plans-grid">
             {mealPlans.map((plan, index) => (
               <div key={index} className="plan-card">
@@ -243,7 +239,7 @@ const HomePage = () => {
             ))}
           </div>
           <div className="plans-cta">
-            <button className="cta-button">See what's on the menu</button>
+            <button className="cta-button" onClick={() => navigate('/thuc-don')}>Xem công thức ngay!</button>
           </div>
         </div>
       </section>
@@ -251,7 +247,7 @@ const HomePage = () => {
       {/* Benefits Section */}
       <section className="benefits">
         <div className="container">
-          <h2>Dinner should always be this easy and delicious.</h2>
+          <h2>Hơn 10.000 khách hàng đã lựa chọn PrepJoy</h2>
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <div key={index} className="benefit">
@@ -261,23 +257,23 @@ const HomePage = () => {
             ))}
           </div>
           <div className="benefits-cta">
-            <button className="cta-button">See Pricing & Plans</button>
+            <button className="cta-button" onClick={() => navigate('/cong-dong')}>Tham gia cộng đồng PrepJoy Home Chef ngay!</button>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section">
+      {/* <section className="cta-section">
         <div className="container">
           <h2>Why millions love FreshKit</h2>
           <h2 className="cta-main">COOK BETTER.<br />EAT WELL.<br />FEEL GREAT.</h2>
           <p>Enjoy up to 10 Free Meals + a Free Cut of the Week* with food delivery from FreshKit!</p>
           <button className="cta-button">See Pricing & Plans</button>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section className="faq-section">
+      {/* <section className="faq-section">
         <div className="container">
           <h2>More questions about our meal delivery services?</h2>
           <div className="faq-list">
@@ -299,10 +295,10 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Newsletter Section */}
-      <section className="newsletter">
+      {/* <section className="newsletter">
         <div className="container">
           <h2>Not hungry yet?</h2>
           <p>Get special offers, meals, and news when you subscribe to our newsletter.</p>
@@ -311,7 +307,7 @@ const HomePage = () => {
             <button className="newsletter-btn">Sign up</button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

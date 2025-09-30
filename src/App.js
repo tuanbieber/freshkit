@@ -9,6 +9,7 @@ import Subscription from './components/Subscription';
 import Community from './components/Community';
 import MenusPage from './components/MenusPage';
 import RecipesPage from './components/RecipesPage';
+import Partners from './components/Partners';
 import Footer from './components/Footer';
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
           <Route path="/thuc-don" element={<MenusPage />} />
           <Route path="/goi-dang-ky" element={<Subscription />} />
           <Route path="/cong-dong" element={<Community />} />
-          <Route path="/doi-tac" element={<About />} />
+          <Route path="/doi-tac" element={<Partners />} />
           <Route path="/recipes" element={<RecipesPage />} />
           <Route path="/plans" element={<Plans />} />
         </Routes>

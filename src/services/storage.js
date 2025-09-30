@@ -376,10 +376,7 @@ class StorageService {
             avatar: '👩‍🍳',
             verified: true
           },
-          images: [
-            'https://vickypham.com/wp-content/uploads/2024/08/48f43-2023_06_09eosm506018.jpg',
-            'https://i.ytimg.com/vi/EpRBxau3ou0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDAAng9KhsIdSBRf06WkyMDn4708w'
-          ],
+          images: ['/community/community-1.jpg'],
           caption: 'Hôm nay làm món Phở Bò theo công thức FreshKit! 🍜 Nước dùng ngọt thanh, thịt bò mềm, rau thơm tươi. Cả nhà đều khen ngon! #FreshKit #PhoBo #CookingAtHome',
           likes: 1247,
           comments: 89,
@@ -395,15 +392,141 @@ class StorageService {
             avatar: '👨‍🍳',
             verified: false
           },
-          images: [
-            'https://www.andy-cooks.com/cdn/shop/articles/20250617054400-andy-20cooks-20-20pork-20veg-20and-20noodles-20recipe.jpg?v=1751674201&width=1600'
-          ],
+          images: ['/community/community-2.jpg'],
           caption: 'Lần đầu thử món Bún Chả theo hướng dẫn FreshKit! Thịt nướng thơm lừng, nước chấm chua ngọt vừa miệng. Cảm ơn FreshKit đã chia sẻ công thức tuyệt vời! 🔥',
           likes: 892,
           comments: 45,
           timeAgo: '5 giờ trước',
           liked: true,
           createdAt: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 3,
+          userId: 3,
+          user: {
+            name: 'Lê Thị Lan',
+            avatar: '👩‍🍳',
+            verified: true
+          },
+          images: ['/community/community-3.jpg'],
+          caption: 'Món Cơm Tấm sườn nướng theo FreshKit! Sườn nướng thơm lừng, cơm dẻo thơm, chả trứng ngon tuyệt! Cảm ơn FreshKit đã giúp mình nấu ăn ngon hơn! 🍖 #FreshKit #ComTam',
+          likes: 756,
+          comments: 32,
+          timeAgo: '8 giờ trước',
+          liked: false,
+          createdAt: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 4,
+          userId: 4,
+          user: {
+            name: 'Phạm Đức Anh',
+            avatar: '👨‍🍳',
+            verified: false
+          },
+          images: ['/community/community-4.jpg', '/community/community-5.jpg'],
+          caption: 'Bữa tối hôm nay với món Gỏi Cuốn tôm thịt! Rau tươi, tôm ngọt, thịt mềm, chấm nước mắm chua ngọt. FreshKit giúp mình có bữa ăn healthy và ngon! 🥗 #FreshKit #GoiCuon',
+          likes: 634,
+          comments: 28,
+          timeAgo: '12 giờ trước',
+          liked: true,
+          createdAt: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 5,
+          userId: 5,
+          user: {
+            name: 'Hoàng Thị Mai',
+            avatar: '👩‍🍳',
+            verified: true
+          },
+          images: ['/community/community-6.jpg'],
+          caption: 'Món Chả Cá Lã Vọng theo FreshKit! Cá tươi, nướng thơm, ăn kèm bún tươi và rau thơm. Công thức dễ làm mà ngon không tưởng! 🐟 #FreshKit #ChaCa',
+          likes: 923,
+          comments: 41,
+          timeAgo: '1 ngày trước',
+          liked: false,
+          createdAt: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 6,
+          userId: 6,
+          user: {
+            name: 'Vũ Minh Tuấn',
+            avatar: '👨‍🍳',
+            verified: false
+          },
+          images: ['/community/community-7.jpg'],
+          caption: 'Bánh Xèo tôm thịt theo FreshKit! Bánh giòn, nhân đầy đặn, chấm nước mắm chua ngọt. Lần đầu làm mà thành công ngay! Cảm ơn FreshKit! 🥞 #FreshKit #BanhXeo',
+          likes: 445,
+          comments: 19,
+          timeAgo: '1 ngày trước',
+          liked: true,
+          createdAt: new Date(Date.now() - 26 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 7,
+          userId: 7,
+          user: {
+            name: 'Đặng Thị Hương',
+            avatar: '👩‍🍳',
+            verified: true
+          },
+          images: ['/community/community-8.jpg', '/community/community-9.jpg'],
+          caption: 'Món Nem Nướng Nha Trang theo FreshKit! Nem nướng thơm, bánh tráng giòn, rau tươi, chấm nước mắm đặc biệt. Cả nhà đều thích! 🌯 #FreshKit #NemNuong',
+          likes: 1123,
+          comments: 67,
+          timeAgo: '2 ngày trước',
+          liked: false,
+          createdAt: new Date(Date.now() - 48 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 8,
+          userId: 8,
+          user: {
+            name: 'Ngô Văn Hùng',
+            avatar: '👨‍🍳',
+            verified: false
+          },
+          images: ['/community/community-10.jpg'],
+          caption: 'Món Bún Riêu Cua theo FreshKit! Nước dùng đậm đà, cua tươi, bún mềm. Công thức chi tiết giúp mình làm được món ngon như ngoài hàng! 🦀 #FreshKit #BunRieu',
+          likes: 789,
+          comments: 35,
+          timeAgo: '2 ngày trước',
+          liked: true,
+          createdAt: new Date(Date.now() - 50 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 9,
+          userId: 9,
+          user: {
+            name: 'Trịnh Thị Linh',
+            avatar: '👩‍🍳',
+            verified: true
+          },
+          images: ['/community/community-11.jpg'],
+          caption: 'Món Chè Ba Màu theo FreshKit! Chè đậu đỏ, đậu xanh, bánh lọt, nước cốt dừa thơm ngon. Món tráng miệng hoàn hảo! 🍧 #FreshKit #CheBaMau',
+          likes: 567,
+          comments: 23,
+          timeAgo: '3 ngày trước',
+          liked: false,
+          createdAt: new Date(Date.now() - 72 * 60 * 60 * 1000).toISOString()
+        },
+        {
+          id: 10,
+          userId: 10,
+          user: {
+            name: 'Bùi Văn Nam',
+            avatar: '👨‍🍳',
+            verified: false
+          },
+          images: ['/community/community-12.jpg'],
+          caption: 'Món Cà Phê Sữa Đá theo FreshKit! Cà phê đậm đà, sữa đặc ngọt, đá lạnh mát. Thức uống hoàn hảo cho buổi sáng! ☕ #FreshKit #CaPheSuaDa',
+          likes: 334,
+          comments: 15,
+          timeAgo: '3 ngày trước',
+          liked: true,
+          createdAt: new Date(Date.now() - 75 * 60 * 60 * 1000).toISOString()
         }
       ];
     }

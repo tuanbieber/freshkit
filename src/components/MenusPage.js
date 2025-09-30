@@ -2,224 +2,206 @@ import React, { useState } from 'react';
 import './MenusPage.css';
 
 const MenusPage = () => {
-  const [selectedFilter, setSelectedFilter] = useState('Tất cả');
+  const [selectedBadge, setSelectedBadge] = useState('Tất cả');
   const [selectedDiet, setSelectedDiet] = useState('Tất cả chế độ ăn');
   const [selectedCalories, setSelectedCalories] = useState('Tất cả calo');
   const [selectedPrice, setSelectedPrice] = useState('Tất cả giá');
   const [selectedTime, setSelectedTime] = useState('Tất cả thời gian');
-  const [showMoreFilters, setShowMoreFilters] = useState(false);
 
-  const filters = [
+  const badgeFilters = [
     'Tất cả',
-    'Món phổ biến',
-    'Món bán chạy',
-    'Món mới',
-    'Món truyền thống',
-    'Món nhanh',
-    'Món đặc sản'
+    'Được yêu thích',
+    'Giá tốt',
+    'Bán chạy',
+    'Nhanh gọn'
   ];
 
   const dietFilters = [
     'Tất cả chế độ ăn',
     'Ăn chay',
     'Keto',
-    'Low-carb',
-    'High-protein',
-    'Gluten-free',
-    'Dairy-free'
+    'Eat Clean',
+    'Flexitarian',
+    'Low Fat',
+    'Low Carb'
   ];
 
   const calorieRanges = [
     'Tất cả calo',
-    'Dưới 300 calo',
-    '300-500 calo',
-    '500-700 calo',
-    'Trên 700 calo'
+    'Dưới 400 calo',
+    '400 - 500 calo',
+    '500 - 600 calo',
+    '600 - 700 calo'
   ];
 
   const priceRanges = [
     'Tất cả giá',
-    'Dưới 50k',
-    '50k-100k',
-    '100k-200k',
-    'Trên 200k'
+    '30.000 - 50.000',
+    '50.000 - 100.000',
+    '100.000 - 200.000',
+    'Trên 200.000'
   ];
 
   const timeRanges = [
     'Tất cả thời gian',
-    'Dưới 15 phút',
-    '15-30 phút',
-    '30-45 phút',
-    'Trên 45 phút'
+    '15-20p',
+    '20-30p'
   ];
 
   const recipes = [
-    // Vietnamese Dishes
     {
       id: 1,
-      name: 'Phở Bò',
+      name: 'Salad cá hồi sốt chanh dây',
       category: 'GLOBAL FEAST',
-      description: 'Traditional Vietnamese beef noodle soup with aromatic broth',
-      time: '45 min',
-      timeMinutes: 45,
-      calories: 450,
-      price: 85000,
-      diet: ['High-protein'],
-      tags: ['High Protein', 'Comfort Food', 'Vietnamese', 'Soup'],
-      image: '🍜',
-      badges: ['Món phổ biến', 'Món bán chạy']
+      description: 'Fresh salmon salad with passion fruit dressing',
+      time: '15 min',
+      timeMinutes: 15,
+      calories: 420,
+      price: 120000,
+      diet: ['Eat Clean', 'Flexitarian'],
+      tags: ['Salad', 'Seafood', 'Fresh', 'Healthy'],
+      image: '🥗',
+      badges: ['Được yêu thích']
     },
     {
       id: 2,
-      name: 'Bánh Mì Thịt Nướng',
+      name: 'Mì gà xá xíu',
       category: 'GLOBAL FEAST',
-      description: 'Vietnamese sandwich with grilled pork, pickled vegetables & herbs',
-      time: '25 min',
-      timeMinutes: 25,
-      calories: 380,
-      price: 45000,
-      diet: ['High-protein'],
-      tags: ['Quick', 'Vietnamese', 'Sandwich', 'High Protein'],
-      image: '🥖',
-      badges: ['Món phổ biến']
+      description: 'Noodles with char siu chicken',
+      time: '30 min',
+      timeMinutes: 30,
+      calories: 560,
+      price: 55000,
+      diet: ['Flexitarian'],
+      tags: ['Noodles', 'Chicken', 'Comfort Food'],
+      image: '🍜',
+      badges: ['Bán chạy']
     },
     {
       id: 3,
-      name: 'Hủ Tiếu Nam Vang',
+      name: 'Cải thảo cuộn gà chay',
       category: 'GLOBAL FEAST',
-      description: 'Cambodian-Vietnamese noodle soup with pork, shrimp & clear broth',
-      time: '40 min',
-      timeMinutes: 40,
-      calories: 520,
-      price: 75000,
-      diet: ['High-protein'],
-      tags: ['Vietnamese', 'Soup', 'Seafood', 'Comfort Food'],
-      image: '🍲',
-      badges: ['Món đặc sản']
+      description: 'Cabbage rolls with vegetarian chicken',
+      time: '20 min',
+      timeMinutes: 20,
+      calories: 280,
+      price: 30000,
+      diet: ['Ăn chay', 'Low Fat', 'Low Carb'],
+      tags: ['Vegetarian', 'Healthy', 'Low Calorie'],
+      image: '🥬',
+      badges: ['Giá tốt', 'Nhanh gọn']
     },
     {
       id: 4,
-      name: 'Chả Cá Lã Vọng',
+      name: 'Cá nướng sả, bún rau củ',
       category: 'GLOBAL FEAST',
-      description: 'Hanoi-style turmeric fish with dill, served with rice noodles',
-      time: '35 min',
-      timeMinutes: 35,
-      calories: 420,
-      price: 120000,
-      diet: ['High-protein', 'Gluten-free'],
-      tags: ['Vietnamese', 'Seafood', 'High Protein', 'Traditional'],
+      description: 'Grilled fish with lemongrass, served with vegetable noodles',
+      time: '25 min',
+      timeMinutes: 25,
+      calories: 350,
+      price: 60000,
+      diet: ['Eat Clean', 'Low Fat'],
+      tags: ['Grilled', 'Seafood', 'Healthy'],
       image: '🐟',
-      badges: ['Món truyền thống', 'Món đặc sản']
+      badges: ['Bán chạy']
     },
     {
       id: 5,
-      name: 'Bún Chả',
+      name: 'Hủ tiếu cá lóc',
       category: 'GLOBAL FEAST',
-      description: 'Grilled pork with vermicelli noodles & fresh herbs',
+      description: 'Noodle soup with snakehead fish',
       time: '30 min',
       timeMinutes: 30,
-      calories: 480,
-      price: 65000,
-      diet: ['High-protein'],
-      tags: ['Vietnamese', 'High Protein', 'Grilled', 'Fresh'],
-      image: '🍜',
-      badges: ['Món phổ biến', 'Món bán chạy']
-    },
-    {
-      id: 6,
-      name: 'Phở Khô Gia Lai',
-      category: 'GLOBAL FEAST',
-      description: 'Dry pho with beef, vegetables & special sauce',
-      time: '25 min',
-      tags: ['Vietnamese', 'Quick', 'High Protein', 'Dry Noodles'],
-      image: '🍝'
-    },
-    {
-      id: 7,
-      name: 'Bún Bò Huế',
-      category: 'GLOBAL FEAST',
-      description: 'Spicy beef noodle soup from Central Vietnam',
-      time: '50 min',
-      tags: ['Vietnamese', 'Spicy', 'Comfort Food', 'Traditional'],
-      image: '🍜'
-    },
-    {
-      id: 8,
-      name: 'Cơm Tấm Sườn Nướng',
-      category: 'GLOBAL FEAST',
-      description: 'Broken rice with grilled pork chop & pickled vegetables',
-      time: '30 min',
-      tags: ['Vietnamese', 'High Protein', 'Grilled', 'Rice'],
-      image: '🍚'
-    },
-    {
-      id: 9,
-      name: 'Bánh Xèo',
-      category: 'GLOBAL FEAST',
-      description: 'Vietnamese crispy crepe with shrimp, pork & bean sprouts',
-      time: '35 min',
-      tags: ['Vietnamese', 'Crispy', 'Seafood', 'Traditional'],
-      image: '🥞'
-    },
-    {
-      id: 10,
-      name: 'Gỏi Cuốn',
-      category: 'GLOBAL FEAST',
-      description: 'Fresh spring rolls with shrimp, pork & herbs',
-      time: '20 min',
-      tags: ['Vietnamese', 'Fresh', 'Healthy', 'Quick'],
-      image: '🌯'
-    },
-    {
-      id: 11,
-      name: 'Chả Cá',
-      category: 'GLOBAL FEAST',
-      description: 'Vietnamese fish cake with vermicelli & herbs',
-      time: '25 min',
-      tags: ['Vietnamese', 'Seafood', 'High Protein', 'Traditional'],
-      image: '🐟'
-    },
-    {
-      id: 12,
-      name: 'Bún Riêu Cua',
-      category: 'GLOBAL FEAST',
-      description: 'Crab noodle soup with tomato & tofu',
-      time: '45 min',
-      tags: ['Vietnamese', 'Seafood', 'Soup', 'Comfort Food'],
+      calories: 550,
+      price: 60000,
+      diet: ['Flexitarian'],
+      tags: ['Soup', 'Seafood', 'Noodles'],
       image: '🍲'
     },
     {
-      id: 13,
-      name: 'Cao Lầu',
+      id: 6,
+      name: 'Ức gà xào rau củ',
       category: 'GLOBAL FEAST',
-      description: 'Hoi An specialty noodles with pork & crispy wontons',
-      time: '40 min',
-      tags: ['Vietnamese', 'Traditional', 'High Protein', 'Regional'],
-      image: '🍜'
-    },
-    {
-      id: 14,
-      name: 'Bánh Mì Pate',
-      category: 'GLOBAL FEAST',
-      description: 'Vietnamese sandwich with liver pate & cold cuts',
+      description: 'Stir-fried chicken breast with vegetables',
       time: '15 min',
-      tags: ['Vietnamese', 'Quick', 'Sandwich', 'Traditional'],
-      image: '🥖'
+      timeMinutes: 15,
+      calories: 300,
+      price: 40000,
+      diet: ['Low Fat', 'Eat Clean'],
+      tags: ['Chicken', 'Stir-fry', 'Healthy'],
+      image: '🍗',
+      badges: ['Nhanh gọn']
     },
     {
-      id: 15,
-      name: 'Chè Đậu Đỏ',
+      id: 7,
+      name: 'Salad bò sốt tiêu',
       category: 'GLOBAL FEAST',
-      description: 'Sweet red bean dessert soup with coconut milk',
+      description: 'Beef salad with pepper sauce',
+      time: '20 min',
+      timeMinutes: 20,
+      calories: 350,
+      price: 90000,
+      diet: ['Keto', 'Low Carb', 'Flexitarian'],
+      tags: ['Salad', 'Beef', 'Low Carb'],
+      image: '🥩'
+    },
+    {
+      id: 8,
+      name: 'Đùi gà nướng sốt mù tạt',
+      category: 'GLOBAL FEAST',
+      description: 'Grilled chicken thigh with mustard sauce',
+      time: '25 min',
+      timeMinutes: 25,
+      calories: 330,
+      price: 40000,
+      diet: ['Flexitarian', 'Low Carb'],
+      tags: ['Grilled', 'Chicken', 'Low Carb'],
+      image: '🍗'
+    },
+    {
+      id: 9,
+      name: 'Cá đối nướng muối hồng',
+      category: 'GLOBAL FEAST',
+      description: 'Grilled mullet with pink salt',
       time: '30 min',
-      tags: ['Vietnamese', 'Dessert', 'Sweet', 'Traditional'],
-      image: '🍮'
+      timeMinutes: 30,
+      calories: 230,
+      price: 70000,
+      diet: ['Keto', 'Low Fat', 'Eat Clean'],
+      tags: ['Grilled', 'Seafood', 'Low Calorie'],
+      image: '🐟'
+    },
+    {
+      id: 10,
+      name: 'Đậu hũ bò băm sốt nấm',
+      category: 'GLOBAL FEAST',
+      description: 'Tofu with minced beef and mushroom sauce',
+      time: '20 min',
+      timeMinutes: 20,
+      calories: 300,
+      price: 85000,
+      diet: ['Low Carb'],
+      tags: ['Tofu', 'Beef', 'Mushroom'],
+      image: '🍄'
+    },
+    {
+      id: 11,
+      name: 'Cơm cà ri chay',
+      category: 'GLOBAL FEAST',
+      description: 'Vegetarian curry rice',
+      time: '15 min',
+      timeMinutes: 15,
+      calories: 400,
+      price: 30000,
+      diet: ['Ăn chay', 'Flexitarian'],
+      tags: ['Vegetarian', 'Curry', 'Rice'],
+      image: '🍛'
     }
   ];
 
   const filteredRecipes = recipes.filter(recipe => {
-    // Main filter (badges)
-    if (selectedFilter !== 'Tất cả' && !recipe.badges?.includes(selectedFilter)) {
+    // Badge filter
+    if (selectedBadge !== 'Tất cả' && !recipe.badges?.includes(selectedBadge)) {
       return false;
     }
 
@@ -234,28 +216,26 @@ const MenusPage = () => {
     // Calorie filter
     if (selectedCalories !== 'Tất cả calo') {
       const calories = recipe.calories || 0;
-      if (selectedCalories === 'Dưới 300 calo' && calories >= 300) return false;
-      if (selectedCalories === '300-500 calo' && (calories < 300 || calories > 500)) return false;
-      if (selectedCalories === '500-700 calo' && (calories < 500 || calories > 700)) return false;
-      if (selectedCalories === 'Trên 700 calo' && calories <= 700) return false;
+      if (selectedCalories === 'Dưới 400 calo' && calories >= 400) return false;
+      if (selectedCalories === '400 - 500 calo' && (calories < 400 || calories > 500)) return false;
+      if (selectedCalories === '500 - 600 calo' && (calories < 500 || calories > 600)) return false;
+      if (selectedCalories === '600 - 700 calo' && (calories < 600 || calories > 700)) return false;
     }
 
     // Price filter
     if (selectedPrice !== 'Tất cả giá') {
       const price = recipe.price || 0;
-      if (selectedPrice === 'Dưới 50k' && price >= 50000) return false;
-      if (selectedPrice === '50k-100k' && (price < 50000 || price > 100000)) return false;
-      if (selectedPrice === '100k-200k' && (price < 100000 || price > 200000)) return false;
-      if (selectedPrice === 'Trên 200k' && price <= 200000) return false;
+      if (selectedPrice === '30.000 - 50.000' && (price < 30000 || price > 50000)) return false;
+      if (selectedPrice === '50.000 - 100.000' && (price < 50000 || price > 100000)) return false;
+      if (selectedPrice === '100.000 - 200.000' && (price < 100000 || price > 200000)) return false;
+      if (selectedPrice === 'Trên 200.000' && price <= 200000) return false;
     }
 
     // Time filter
     if (selectedTime !== 'Tất cả thời gian') {
       const timeMinutes = recipe.timeMinutes || 0;
-      if (selectedTime === 'Dưới 15 phút' && timeMinutes >= 15) return false;
-      if (selectedTime === '15-30 phút' && (timeMinutes < 15 || timeMinutes > 30)) return false;
-      if (selectedTime === '30-45 phút' && (timeMinutes < 30 || timeMinutes > 45)) return false;
-      if (selectedTime === 'Trên 45 phút' && timeMinutes <= 45) return false;
+      if (selectedTime === '15-20p' && (timeMinutes < 15 || timeMinutes > 20)) return false;
+      if (selectedTime === '20-30p' && (timeMinutes < 20 || timeMinutes > 30)) return false;
     }
 
     return true;
@@ -265,27 +245,24 @@ const MenusPage = () => {
     <div className="menus-page">
       <div className="container">
 
-        {/* Main Filter Section */}
-        <div className="filter-section">
-          <h3>Bộ lọc</h3>
-          <div className="filter-buttons">
-            {filters.map((filter, index) => (
-              <button
-                key={index}
-                className={`filter-btn ${selectedFilter === filter ? 'active' : ''}`}
-                onClick={() => setSelectedFilter(filter)}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Advanced Filters */}
         <div className="advanced-filters">
           <div className="filter-row">
             <div className="filter-group">
-              <label>Chế độ ăn</label>
+              <label>Danh hiệu</label>
+              <select 
+                value={selectedBadge} 
+                onChange={(e) => setSelectedBadge(e.target.value)}
+                className="filter-select"
+              >
+                {badgeFilters.map((badge, index) => (
+                  <option key={index} value={badge}>{badge}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="filter-group">
+              <label>Nhu cầu dinh dưỡng</label>
               <select 
                 value={selectedDiet} 
                 onChange={(e) => setSelectedDiet(e.target.value)}
@@ -336,13 +313,6 @@ const MenusPage = () => {
               </select>
             </div>
           </div>
-
-          <button 
-            className="show-more-btn"
-            onClick={() => setShowMoreFilters(!showMoreFilters)}
-          >
-            {showMoreFilters ? 'Ẩn bớt' : 'Xem thêm'} ↓
-          </button>
         </div>
 
         {/* Recipes Grid */}
@@ -391,13 +361,6 @@ const MenusPage = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="menus-cta">
-          <h2>Get cooking</h2>
-          <p>Recipe archive - Check out our cookbook!</p>
-          <button className="cta-button">View All Recipes</button>
         </div>
       </div>
     </div>
