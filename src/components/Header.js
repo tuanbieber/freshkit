@@ -55,8 +55,7 @@ const Header = () => {
     <header className="header" key={location.pathname}>
       <nav className="nav">
         <Link to="/" className="logo" onClick={handleNavigation}>
-          <div className="logo-icon">F</div>
-          <span>FreshKit</span>
+          <img src="/logo.png" alt="FreshKit Logo" className="logo-image" />
         </Link>
         
         <div className={`nav-links ${isMenuOpen ? 'nav-links-open' : ''}`}>

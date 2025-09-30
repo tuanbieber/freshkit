@@ -17,28 +17,18 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #4CAF50;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   margin-right: 1rem;
   text-decoration: none;
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
-.logo-icon {
-  width: 30px;
-  height: 30px;
-  background: #4CAF50;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
+.logo-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {

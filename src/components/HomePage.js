@@ -34,21 +34,21 @@ const HomePage = () => {
       number: 1,
       title: 'Bước 1: Chọn bữa ăn của bạn',
       description: 'Duyệt và lựa chọn từ hơn 100 công thức nấu ăn do đầu bếp',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
+      image: '/highlight/eat-clean.jpg',
       video: null
     },
     {
       number: 2,
       title: 'Tiến hành đặt hàng',
       description: 'Nguyên liệu tươi ngon, được chia theo khẩu phần và công thức nấu ăn từng bước sẽ được PrepJoy chuẩn bị và giao đến bạn.',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop&crop=center',
+      image: '/step/step-2.gif',
       video: null
     },
     {
       number: 3,
       title: 'Trổ tài cùng PrepJoy',
       description: 'Làm theo hướng dẫn từ bộ công thức, đăng tải hình ảnh thành quả tại <strong>PrepJoy Home Chef</strong> và thưởng thức những bữa ăn ngon do chính tay mình làm ra.',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&h=600&fit=crop&crop=center',
+      image: '/step/step-3.gif',
       video: null
     }
   ];
@@ -56,27 +56,33 @@ const HomePage = () => {
   const mealPlans = [
     {
       title: 'Eat Clean',
-      subtitle: 'Ghi gì vào đây',
+      subtitle: 'Thực phẩm sạch, tươi ngon',
       icon: '🥩',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop&crop=center'
+      image: '/highlight/eat-clean.jpg'
     },
     {
       title: 'Flexitarian',
-      subtitle: 'Ghi gì vào đây',
+      subtitle: 'Linh hoạt, cân bằng dinh dưỡng',
       icon: '🥬',
-      image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop&crop=center'
+      image: '/highlight/flexitarian.jpg'
     },
     {
       title: 'Low Fat, Low Carb',
-      subtitle: 'Ghi gì vào đây',
+      subtitle: 'Giảm cân hiệu quả',
       icon: '👨‍👩‍👧‍👦',
-      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=300&fit=crop&crop=center'
+      image: '/highlight/low-fat-low-carb.jpg'
+    },
+    {
+      title: 'Ăn chay',
+      subtitle: 'Thực vật tươi, giàu protein',
+      icon: '👨‍👩‍👧‍👦',
+      image: '/highlight/an-chay.jpg'
     },
     {
       title: 'Keto',
-      subtitle: 'Ghi gì vào đây',
+      subtitle: 'Nhiều chất béo, ít carb',
       icon: '💪',
-      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop&crop=center'
+      image: '/highlight/keto.jpg'
     },
   ];
 
@@ -159,22 +165,14 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="stats">
         <div className="container">
-          <h2>“PrepJoy – Giải pháp bữa ăn thông minh cho cuộc sống bận rộn”</h2>
-          <div className="stats-grid">
-            {stats.map((stat, index) => (
-              <div key={index} className="stat-item">
-                <div className="stat-number">{stat.number}</div>
-                <div className="stat-text">{stat.text}</div>
-              </div>
-            ))}
-          </div>
+          <br/> <br/>
+          <h2>"PrepJoy – Giải pháp bữa ăn thông minh cho cuộc sống bận rộn"</h2>
+          <p className="stats-subtitle">Tiện lợi, tiết kiệm, cá nhân hóa và giàu dinh dưỡng</p>
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="process">
         <div className="container">
           <h2>“Bữa ăn dinh dưỡng với 3 bước đơn giản cùng PrepJoy”</h2>
@@ -217,7 +215,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Meal Plans Section */}
       <section className="meal-plans">
         <div className="container">
           <h2>Một số món ăn nổi bật của các chế độ ăn</h2>
@@ -231,7 +228,6 @@ const HomePage = () => {
                     alt={plan.title}
                     className="plan-image"
                   />
-                  <div className="plan-icon-overlay">{plan.icon}</div>
                 </div>
                 <h3>{plan.title}</h3>
                 <p>{plan.subtitle}</p>
@@ -245,18 +241,31 @@ const HomePage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="benefits">
+      <section className="customer-feedback">
         <div className="container">
           <h2>Hơn 10.000 khách hàng đã lựa chọn PrepJoy</h2>
-          <div className="benefits-grid">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="benefit">
-                <h3>{benefit.title}</h3>
-                <p>{benefit.description}</p>
+          <div className="feedback-grid">
+            {[
+              { id: 1, name: "Quỳnh Nhi", feedback: "PrepJoy đã giúp mình tiết kiệm được rất nhiều thời gian khi nấu ăn." },
+              { id: 2, name: "Đan Trâm", feedback: "Siêu dễ nấu luôn! Bé nhà mình rất thích!" },
+              { id: 3, name: "Tường Vi", feedback: "Từ ngày có PrepJoy, mình siêng nấu ăn hẳn!" },
+              { id: 4, name: "Dũng Nguyễn", feedback: "Hướng dẫn nấu ăn rất chi tiết. Nhờ có PrepJoy mà mình đã ghi điểm với cô ấy." },
+              { id: 5, name: "Diệp Huỳnh", feedback: "Mình rất thích!" }
+            ].map((customer) => (
+              <div key={customer.id} className="feedback-item">
+                <img 
+                  src={`/customer-feedback/customer-feedback-${customer.id}.jpg`} 
+                  alt={`Customer feedback ${customer.id}`}
+                  className="feedback-image"
+                />
+                <div className="feedback-content">
+                  <h4 className="customer-name">{customer.name}</h4>
+                  <p className="customer-feedback-text">"{customer.feedback}"</p>
+                </div>
               </div>
             ))}
           </div>
-          <div className="benefits-cta">
+          <div className="feedback-cta">
             <button className="cta-button" onClick={() => navigate('/cong-dong')}>Tham gia cộng đồng PrepJoy Home Chef ngay!</button>
           </div>
         </div>
