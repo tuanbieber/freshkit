@@ -191,9 +191,8 @@
 
 .currency {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: normal;
   color: #333;
-  text-decoration: line-through;
   margin-right: 0.25rem;
 }
 
@@ -203,12 +202,12 @@
   color: #333;
 }
 
-.plan-period {
+.plan-price .period {
   color: #666;
   font-size: 0.9rem;
-  margin-bottom: 2rem;
+  margin-left: 0.25rem;
 }
-
+  
 .plan-button {
   width: 100%;
   padding: 1rem 2rem;
@@ -430,24 +429,29 @@
 
 .plan-price-popup {
   margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
 }
 
 .plan-price-popup .currency {
-  font-size: 1.2rem;
-  color: #4CAF50;
-  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal;
+  margin-left: 0.25rem;
 }
 
 .plan-price-popup .price {
-  font-size: 2rem;
-  color: #4CAF50;
-  font-weight: 700;
-  margin: 0 0.2rem;
+  font-size: 1rem;
+  color: #333;
+  font-weight: normal !important;
+  margin: 0;
 }
 
 .plan-price-popup .period {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 1rem;
+  color: #333;
+  margin-left: 0.25rem;
 }
 
 .selected-plan-info .plan-description {

@@ -163,8 +163,8 @@ const Subscription = () => {
       subtitle: 'For one person',
       description: 'Bắt đầu hành trình ăn uống lành mạnh với các công cụ cơ bản. Không phí, chỉ cần sáng tạo.',
       price: '0',
-      currency: '₫',
-      period: '/year for one person',
+      currency: 'đ',
+      period: '/năm',
       buttonText: 'Bắt đầu',
       buttonClass: 'btn-free',
       headerClass: 'header-free',
@@ -182,9 +182,9 @@ const Subscription = () => {
       name: 'PrepJoy Member',
       subtitle: 'For one person',
       description: 'Mở khóa các tính năng cao cấp, cá nhân hóa trải nghiệm và hướng dẫn dinh dưỡng chuyên nghiệp.',
-      price: '1,200,000',
-      currency: '₫',
-      period: '/year for one person',
+      price: '39,000',
+      currency: 'đ',
+      period: '/tháng',
       buttonText: 'Dùng thử miễn phí',
       buttonClass: 'btn-pro',
       headerClass: 'header-pro',
@@ -238,10 +238,10 @@ const Subscription = () => {
                 <h2 className="plan-name">{plan.name}</h2>
                 <p className="plan-description">{plan.description}</p>
                 <div className="plan-price">
-                  <span className="currency">{plan.currency}</span>
                   <span className="price">{plan.price}</span>
+                  <span className="currency">{plan.currency}</span>
+                  <span className="period">{plan.period}</span>
                 </div>
-                <p className="plan-period">{plan.period}</p>
                 <button 
                   className={`plan-button ${plan.buttonClass} ${isCurrentPlan ? 'current-plan-btn' : ''} ${isDisabled ? 'disabled-btn' : ''}`}
                   onClick={(e) => {
@@ -289,8 +289,8 @@ const Subscription = () => {
               <div className="selected-plan-info">
                 <h3>{selectedPlanData.name}</h3>
                 <p className="plan-price-popup">
-                  <span className="currency">{selectedPlanData.currency}</span>
                   <span className="price">{selectedPlanData.price}</span>
+                  <span className="currency">{selectedPlanData.currency}</span>
                   <span className="period">{selectedPlanData.period}</span>
                 </p>
                 <p className="plan-description">{selectedPlanData.description}</p>

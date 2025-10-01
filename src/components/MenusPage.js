@@ -7,6 +7,18 @@ const MenusPage = () => {
   const [selectedCalories, setSelectedCalories] = useState('Tất cả calo');
   const [selectedPrice, setSelectedPrice] = useState('Tất cả giá');
   const [selectedTime, setSelectedTime] = useState('Tất cả thời gian');
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const handleRecipeClick = (recipe) => {
+    setSelectedRecipe(recipe);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedRecipe(null);
+  };
 
   const badgeFilters = [
     'Tất cả',
@@ -21,7 +33,7 @@ const MenusPage = () => {
     'Ăn chay',
     'Keto',
     'Eat Clean',
-    'Flexitarian',
+    'Flexitarian',  
     'Low Fat',
     'Low Carb'
   ];
@@ -318,7 +330,7 @@ const MenusPage = () => {
         {/* Recipes Grid */}
         <div className="recipes-grid">
           {filteredRecipes.map((recipe) => (
-            <div key={recipe.id} className="recipe-card">
+            <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
               <div className="recipe-image">
                 <span className="recipe-emoji">{recipe.image}</span>
                 {recipe.badges && recipe.badges.length > 0 && (
@@ -363,6 +375,84 @@ const MenusPage = () => {
           ))}
         </div>
       </div>
+
+      {/* Recipe Modal */}
+      {showModal && selectedRecipe && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>×</button>
+            
+            <div className="modal-header">
+              <div className="modal-image">
+                <span className="modal-emoji">{selectedRecipe.image}</span>
+              </div>
+              <div className="modal-title-section">
+                <h2 className="modal-title">{selectedRecipe.name}</h2>
+                <p className="modal-category">{selectedRecipe.category}</p>
+                <p className="modal-description">{selectedRecipe.description}</p>
+              </div>
+            </div>
+
+            <div className="modal-body">
+              <div className="modal-stats">
+                <div className="stat-item">
+                  <span className="stat-icon">⏱️</span>
+                  <span className="stat-label">Thời gian nấu</span>
+                  <span className="stat-value">{selectedRecipe.time}</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-icon">🔥</span>
+                  <span className="stat-label">Calories</span>
+                  <span className="stat-value">{selectedRecipe.calories} calo</span>
+                </div>
+                <div className="stat-item">
+                  <span className="stat-icon">💰</span>
+                  <span className="stat-label">Giá</span>
+                  <span className="stat-value">{selectedRecipe.price?.toLocaleString('vi-VN')}đ</span>
+                </div>
+              </div>
+
+              {selectedRecipe.diet && selectedRecipe.diet.length > 0 && (
+                <div className="modal-section">
+                  <h3>Chế độ ăn phù hợp</h3>
+                  <div className="modal-tags">
+                    {selectedRecipe.diet.map((diet, index) => (
+                      <span key={index} className="modal-tag diet">{diet}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selectedRecipe.tags && selectedRecipe.tags.length > 0 && (
+                <div className="modal-section">
+                  <h3>Thẻ</h3>
+                  <div className="modal-tags">
+                    {selectedRecipe.tags.map((tag, index) => (
+                      <span key={index} className="modal-tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selectedRecipe.badges && selectedRecipe.badges.length > 0 && (
+                <div className="modal-section">
+                  <h3>Đặc điểm</h3>
+                  <div className="modal-tags">
+                    {selectedRecipe.badges.map((badge, index) => (
+                      <span key={index} className="modal-tag badge">{badge}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="modal-actions">
+                <button className="modal-btn primary">Thêm vào giỏ hàng</button>
+                <button className="modal-btn secondary">Xem chi tiết</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

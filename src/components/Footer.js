@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2025 FreshKit. Tất cả quyền được bảo lưu.</p>
+          &copy; 2025 PrepJoy. Tất cả quyền được bảo lưu.
         </div>
       </div>
     </footer>

@@ -14,20 +14,7 @@ const HomePage = () => {
     navigate('/goi-dang-ky');
   };
 
-  const stats = [
-    // {
-    //   number: '92221%',
-    //   text: 'of our customers feel healthier with a FreshKit subscription'
-    // },
-    // {
-    //   number: '93%',
-    //   text: 'of our customers feel less stressed at dinner time'
-    // },
-    // {
-    //   number: '98%',
-    //   text: 'of our customers save time on meals'
-    // }
-  ];
+  const stats = [];
 
   const processSteps = [
     {
@@ -146,11 +133,31 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      {/* Banner Section */}
+      <div className="home-banner">
+        <img 
+          src="/trang-chu/banner.png" 
+          alt="Fresh ingredients and cooking" 
+          className="banner-image"
+          onLoad={() => console.log('Banner image loaded successfully')}
+          onError={(e) => {
+            console.log('Banner image failed to load, using fallback');
+            e.target.style.display = 'none';
+            e.target.parentElement.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+          }}
+        />
+        <div className="banner-cta">
+          <button className="banner-cta-button" onClick={handleSignUpClick}>
+            Đăng ký ngay!
+          </button>
+        </div>
+      </div>
+
       {/* Hero Section */}
-      <section className="hero">
+      {/* <section className="hero">
         <div className="hero-background">
           <img 
-            src="/banner.jpg" 
+            src="/trang-chu/banner.png" 
             alt="Fresh ingredients and cooking" 
             className="hero-image"
             onLoad={() => console.log('Hero image loaded successfully')}
@@ -163,7 +170,7 @@ const HomePage = () => {
           <div className="hero-overlay"></div>
           <div className="hero-clickable-zone" onClick={handleSignUpClick}></div>
         </div>
-      </section>
+      </section> */}
 
       <section className="stats">
         <div className="container">
