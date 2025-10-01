@@ -1,6 +1,6 @@
-# FreshKit - Meal Kit Delivery Website
+# PrepJoy - Meal Kit Delivery Website
 
-A modern, responsive meal kit delivery website built with React, inspired by HelloFresh. FreshKit offers fresh ingredients, chef-curated recipes, and convenient meal planning solutions.
+A modern, responsive meal kit delivery website built with React, inspired by HelloFresh. PrepJoy offers fresh ingredients, chef-curated recipes, and convenient meal planning solutions.
 
 ## 🚀 Features
 
