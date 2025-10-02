@@ -181,7 +181,7 @@ const MenusPage = () => {
       price: 70000,
       diet: ['Keto', 'Low Fat', 'Eat Clean'],
       tags: ['Grilled', 'Seafood', 'Low Calorie'],
-      image: 'Cá đối nướng muối hồng.jpg'
+      image: '/Cá đối nướng muối hồng.jpg'
     },
     {
       id: 10,
@@ -194,7 +194,7 @@ const MenusPage = () => {
       price: 85000,
       diet: ['Low Carb'],
       tags: ['Tofu', 'Beef', 'Mushroom'],
-      image: 'Đậu hũ bò băm sốt nấm.jpg'
+      image: '/Đậu hũ bò băm sốt nấm.jpg'
     },
     {
       id: 11,
@@ -207,7 +207,7 @@ const MenusPage = () => {
       price: 30000,
       diet: ['Ăn chay', 'Flexitarian'],
       tags: ['Vegetarian', 'Curry', 'Rice'],
-      image: 'Cơm cà ri chay.jpg'
+      image: '/Cơm cà ri chay.jpg'
     }
   ];
 
