@@ -63,7 +63,7 @@ const MenusPage = () => {
   const recipes = [
     {
       id: 1,
-      name: 'Salad cá hồi sốt chanh dây',
+      name: 'Salad cá hồi chanh dây',
       category: 'GLOBAL FEAST',
       description: 'Fresh salmon salad with passion fruit dressing',
       time: '15 min',
@@ -72,7 +72,7 @@ const MenusPage = () => {
       price: 120000,
       diet: ['Eat Clean', 'Flexitarian'],
       tags: ['Salad', 'Seafood', 'Fresh', 'Healthy'],
-      image: '🥗',
+      image: '/thuc-don/Salad cá hồi chanh dây.jpg',
       badges: ['Được yêu thích']
     },
     {
@@ -86,7 +86,7 @@ const MenusPage = () => {
       price: 55000,
       diet: ['Flexitarian'],
       tags: ['Noodles', 'Chicken', 'Comfort Food'],
-      image: '🍜',
+      image: '/thuc-don/Mì gà xá xíu.jpg',
       badges: ['Bán chạy']
     },
     {
@@ -100,7 +100,7 @@ const MenusPage = () => {
       price: 30000,
       diet: ['Ăn chay', 'Low Fat', 'Low Carb'],
       tags: ['Vegetarian', 'Healthy', 'Low Calorie'],
-      image: '🥬',
+      image: '/thuc-don/Cải thảo cuộn gà chay.jpg',
       badges: ['Giá tốt', 'Nhanh gọn']
     },
     {
@@ -114,7 +114,7 @@ const MenusPage = () => {
       price: 60000,
       diet: ['Eat Clean', 'Low Fat'],
       tags: ['Grilled', 'Seafood', 'Healthy'],
-      image: '🐟',
+      image: '/thuc-don/Cá nướng sả, bún rau củ.jpg',
       badges: ['Bán chạy']
     },
     {
@@ -128,7 +128,7 @@ const MenusPage = () => {
       price: 60000,
       diet: ['Flexitarian'],
       tags: ['Soup', 'Seafood', 'Noodles'],
-      image: '🍲'
+      image: '/thuc-don/Hủ tiếu cá lóc.jpg'
     },
     {
       id: 6,
@@ -141,7 +141,7 @@ const MenusPage = () => {
       price: 40000,
       diet: ['Low Fat', 'Eat Clean'],
       tags: ['Chicken', 'Stir-fry', 'Healthy'],
-      image: '🍗',
+      image: '/thuc-don/Ức gà xào rau củ.jpg',
       badges: ['Nhanh gọn']
     },
     {
@@ -155,7 +155,7 @@ const MenusPage = () => {
       price: 90000,
       diet: ['Keto', 'Low Carb', 'Flexitarian'],
       tags: ['Salad', 'Beef', 'Low Carb'],
-      image: '🥩'
+      image: '/thuc-don/Salad bò sốt tiêu.jpg'
     },
     {
       id: 8,
@@ -168,7 +168,7 @@ const MenusPage = () => {
       price: 40000,
       diet: ['Flexitarian', 'Low Carb'],
       tags: ['Grilled', 'Chicken', 'Low Carb'],
-      image: '🍗'
+      image: '/thuc-don/Đùi gà nướng sốt mù tạt.jpg'
     },
     {
       id: 9,
@@ -181,7 +181,7 @@ const MenusPage = () => {
       price: 70000,
       diet: ['Keto', 'Low Fat', 'Eat Clean'],
       tags: ['Grilled', 'Seafood', 'Low Calorie'],
-      image: '🐟'
+      image: '/thuc-don/Cá đối nướng muối hồng.jpg'
     },
     {
       id: 10,
@@ -194,7 +194,7 @@ const MenusPage = () => {
       price: 85000,
       diet: ['Low Carb'],
       tags: ['Tofu', 'Beef', 'Mushroom'],
-      image: '🍄'
+      image: '/thuc-don/Đậu hũ bò băm sốt nấm.jpg'
     },
     {
       id: 11,
@@ -207,7 +207,7 @@ const MenusPage = () => {
       price: 30000,
       diet: ['Ăn chay', 'Flexitarian'],
       tags: ['Vegetarian', 'Curry', 'Rice'],
-      image: '🍛'
+      image: '/thuc-don/Cơm cà ri chay.jpg'
     }
   ];
 
@@ -332,7 +332,7 @@ const MenusPage = () => {
           {filteredRecipes.map((recipe) => (
             <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
               <div className="recipe-image">
-                <span className="recipe-emoji">{recipe.image}</span>
+                <img src={recipe.image} alt={recipe.name} />
                 {recipe.badges && recipe.badges.length > 0 && (
                   <div className="recipe-badges">
                     {recipe.badges.map((badge, index) => (

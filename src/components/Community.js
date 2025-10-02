@@ -88,7 +88,7 @@ const Community = () => {
   return (
     <div className="community-page">
       <div className="community-banner">
-        <img src="/member-banner.png" alt="Community Banner" />
+        <img src="community/banner.jpg" alt="Community Banner" />
       </div>
       <div className="container">
         <div className="community-header">

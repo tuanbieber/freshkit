@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-left">
             <div className="footer-logo">
-              <img src="/logo.png" alt="PrepJoy Logo" className="footer-logo-image" />
+              {/* <img src="/logo.png" alt="PrepJoy Logo" className="footer-logo-image" /> */}
               <h3>PrepJoy</h3>
             </div>
             <p>Nền tảng đồ ăn sơ chế sẵn lành mạnh hàng đầu Việt Nam</p>

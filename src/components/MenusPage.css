@@ -197,14 +197,26 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
+.recipe-card:hover .recipe-image img {
+  transform: scale(1.05);
+}
+
 .recipe-image {
   position: relative;
   height: 200px;
-  background: linear-gradient(135deg, #4CAF50, #45a049);
+  background: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.recipe-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
 }
 
 .recipe-badges {
@@ -419,6 +431,10 @@
     grid-template-columns: 1fr;
   }
   
+  .recipe-image {
+    height: 180px;
+  }
+  
   .menus-cta h2 {
     font-size: 1.5rem;
   }
@@ -437,6 +453,10 @@
   
   .recipe-content {
     padding: 1rem;
+  }
+  
+  .recipe-image {
+    height: 160px;
   }
   
   .recipe-name {
