@@ -72,7 +72,7 @@ const MenusPage = () => {
       price: 120000,
       diet: ['Eat Clean', 'Flexitarian'],
       tags: ['Salad', 'Seafood', 'Fresh', 'Healthy'],
-      image: '/thuc-don/Salad cá hồi chanh dây.jpg',
+      image: 'Salad cá hồi chanh dây.jpg',
       badges: ['Được yêu thích']
     },
     {
@@ -86,7 +86,7 @@ const MenusPage = () => {
       price: 55000,
       diet: ['Flexitarian'],
       tags: ['Noodles', 'Chicken', 'Comfort Food'],
-      image: '/thuc-don/Mì gà xá xíu.jpg',
+      image: 'Mì gà xá xíu.jpg',
       badges: ['Bán chạy']
     },
     {
@@ -100,7 +100,7 @@ const MenusPage = () => {
       price: 30000,
       diet: ['Ăn chay', 'Low Fat', 'Low Carb'],
       tags: ['Vegetarian', 'Healthy', 'Low Calorie'],
-      image: '/thuc-don/Cải thảo cuộn gà chay.jpg',
+      image: 'Cải thảo cuộn gà chay.jpg',
       badges: ['Giá tốt', 'Nhanh gọn']
     },
     {
@@ -114,7 +114,7 @@ const MenusPage = () => {
       price: 60000,
       diet: ['Eat Clean', 'Low Fat'],
       tags: ['Grilled', 'Seafood', 'Healthy'],
-      image: '/thuc-don/Cá nướng sả, bún rau củ.jpg',
+      image: 'Cá nướng sả, bún rau củ.jpg',
       badges: ['Bán chạy']
     },
     {
@@ -128,7 +128,7 @@ const MenusPage = () => {
       price: 60000,
       diet: ['Flexitarian'],
       tags: ['Soup', 'Seafood', 'Noodles'],
-      image: '/thuc-don/Hủ tiếu cá lóc.jpg'
+      image: 'Hủ tiếu cá lóc.jpg'
     },
     {
       id: 6,
@@ -141,7 +141,7 @@ const MenusPage = () => {
       price: 40000,
       diet: ['Low Fat', 'Eat Clean'],
       tags: ['Chicken', 'Stir-fry', 'Healthy'],
-      image: '/thuc-don/Ức gà xào rau củ.jpg',
+      image: 'Ức gà xào rau củ.jpg',
       badges: ['Nhanh gọn']
     },
     {
@@ -155,7 +155,7 @@ const MenusPage = () => {
       price: 90000,
       diet: ['Keto', 'Low Carb', 'Flexitarian'],
       tags: ['Salad', 'Beef', 'Low Carb'],
-      image: '/thuc-don/Salad bò sốt tiêu.jpg'
+      image: 'Salad bò sốt tiêu.jpg'
     },
     {
       id: 8,
@@ -168,7 +168,7 @@ const MenusPage = () => {
       price: 40000,
       diet: ['Flexitarian', 'Low Carb'],
       tags: ['Grilled', 'Chicken', 'Low Carb'],
-      image: '/thuc-don/Đùi gà nướng sốt mù tạt.jpg'
+      image: 'Đùi gà nướng sốt mù tạt.jpg'
     },
     {
       id: 9,
@@ -181,7 +181,7 @@ const MenusPage = () => {
       price: 70000,
       diet: ['Keto', 'Low Fat', 'Eat Clean'],
       tags: ['Grilled', 'Seafood', 'Low Calorie'],
-      image: '/thuc-don/Cá đối nướng muối hồng.jpg'
+      image: 'Cá đối nướng muối hồng.jpg'
     },
     {
       id: 10,
@@ -194,7 +194,7 @@ const MenusPage = () => {
       price: 85000,
       diet: ['Low Carb'],
       tags: ['Tofu', 'Beef', 'Mushroom'],
-      image: '/thuc-don/Đậu hũ bò băm sốt nấm.jpg'
+      image: 'Đậu hũ bò băm sốt nấm.jpg'
     },
     {
       id: 11,
@@ -207,7 +207,7 @@ const MenusPage = () => {
       price: 30000,
       diet: ['Ăn chay', 'Flexitarian'],
       tags: ['Vegetarian', 'Curry', 'Rice'],
-      image: '/thuc-don/Cơm cà ri chay.jpg'
+      image: 'Cơm cà ri chay.jpg'
     }
   ];
 
