@@ -1,0 +1,346 @@
+.payment-form {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.payment-methods {
+  margin-bottom: 2rem;
+}
+
+.payment-method-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.payment-tab {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.payment-tab:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+.payment-tab.active {
+  border-color: #4CAF50;
+  background: #e8f5e9;
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.payment-method-content {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.card-types {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.card-type {
+  width: 60px;
+  height: 40px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-type.active {
+  border-color: #4CAF50;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.card-type img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-type span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.security-note {
+  background: #e3f2fd;
+  padding: 0.75rem;
+  border-radius: 8px;
+  color: #1976D2;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.ewallet-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ewallet-option {
+  cursor: pointer;
+}
+
+.ewallet-option input[type="radio"] {
+  display: none;
+}
+
+.ewallet-card {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.ewallet-option input[type="radio"]:checked + .ewallet-card {
+  border-color: #4CAF50;
+  background: #e8f5e9;
+}
+
+.ewallet-card img {
+  width: 60px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.ewallet-icon {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.ewallet-note {
+  background: #fff3cd;
+  padding: 0.75rem;
+  border-radius: 8px;
+  color: #856404;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.transfer-info {
+  text-align: center;
+}
+
+.transfer-info h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.bank-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.bank-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.bank-info strong {
+  color: #333;
+}
+
+.transfer-note {
+  background: #fff3cd;
+  padding: 0.75rem;
+  border-radius: 8px;
+  color: #856404;
+  font-size: 0.85rem;
+}
+
+.save-payment-method {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.save-payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.save-payment-method input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+.company-invoice-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.company-invoice-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.company-invoice-toggle input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+.company-invoice-form {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.subscription-notice {
+  background: #e3f2fd;
+  border-left: 4px solid #2196F3;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.notice-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.notice-content {
+  flex: 1;
+}
+
+.notice-content p {
+  margin: 0.25rem 0;
+  color: #1976D2;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.notice-content strong {
+  color: #0d47a1;
+}
+
+.manage-link {
+  color: #0d47a1;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.manage-link:hover {
+  color: #1565c0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-form {
+    padding: 1rem;
+  }
+
+  .payment-method-tabs {
+    flex-direction: column;
+  }
+
+  .payment-tab {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ewallet-options {
+    grid-template-columns: 1fr;
+  }
+
+  .subscription-notice {
+    flex-direction: column;
+  }
+}
+

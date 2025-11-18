@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import storageService from '../services/storage';
+import cartService from '../services/cart';
 import LoginModal from './LoginModal';
 import './Header.css';
 
@@ -10,6 +11,7 @@ const Header = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const [cartItemCount, setCartItemCount] = useState(0);
   const location = useLocation();
 
   // Update current path when location changes
@@ -28,6 +30,19 @@ const Header = () => {
     };
     
     checkSession();
+  }, []);
+
+  // Subscribe to cart changes
+  useEffect(() => {
+    // Load initial cart count
+    setCartItemCount(cartService.getTotalItems());
+    
+    // Subscribe to cart changes
+    const unsubscribe = cartService.subscribe(() => {
+      setCartItemCount(cartService.getTotalItems());
+    });
+
+    return () => unsubscribe();
   }, []);
 
   const handleNavigation = () => {
@@ -104,6 +119,17 @@ const Header = () => {
               className="search-input"
             />
           </div>
+          
+          <Link to="/gio-hang" className="cart-icon-link">
+            <div className="cart-icon">
+              🛒
+              {cartItemCount > 0 && (
+                <span className="cart-badge">
+                  {cartItemCount > 99 ? '99+' : cartItemCount}
+                </span>
+              )}
+            </div>
+          </Link>
           
           {isLoading ? (
             <div className="loading-state">Đang tải...</div>
