@@ -184,7 +184,7 @@ const Subscription = () => {
       description: 'Mở khóa các tính năng cao cấp, cá nhân hóa trải nghiệm và hướng dẫn dinh dưỡng chuyên nghiệp.',
       price: '39,000',
       currency: 'đ',
-      period: '/tuần',
+      period: '/tháng',
       buttonText: 'Dùng thử miễn phí',
       buttonClass: 'btn-pro',
       headerClass: 'header-pro',
@@ -239,7 +239,7 @@ const Subscription = () => {
                 <p className="plan-description">{plan.description}</p>
                 <div className="plan-price">
                   <span className="price">{plan.price}</span>
-                  <span>{plan.currency}</span>
+                  <span className="currency">{plan.currency}</span>
                   <span className="period">{plan.period}</span>
                 </div>
                 <button 

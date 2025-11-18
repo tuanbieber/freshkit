@@ -377,7 +377,7 @@ class StorageService {
             verified: true
           },
           images: ['/community/community-1.jpg'],
-          caption: 'Hôm nay làm món Phở Bò theo công thức PrepJoy! 🍜 Nước dùng ngọt thanh, thịt bò mềm, rau thơm tươi. Cả nhà đều khen ngon! #PrepJoy #PhoBo #CookingAtHome',
+          caption: 'Hôm nay làm món Phở Bò theo công thức FreshKit! 🍜 Nước dùng ngọt thanh, thịt bò mềm, rau thơm tươi. Cả nhà đều khen ngon! #FreshKit #PhoBo #CookingAtHome',
           likes: 1247,
           comments: 89,
           timeAgo: '2 giờ trước',
@@ -393,7 +393,7 @@ class StorageService {
             verified: false
           },
           images: ['/community/community-2.jpg'],
-          caption: 'Lần đầu thử món Bún Chả theo hướng dẫn PrepJoy! Thịt nướng thơm lừng, nước chấm chua ngọt vừa miệng. Cảm ơn PrepJoy đã chia sẻ công thức tuyệt vời! 🔥',
+          caption: 'Lần đầu thử món Bún Chả theo hướng dẫn FreshKit! Thịt nướng thơm lừng, nước chấm chua ngọt vừa miệng. Cảm ơn FreshKit đã chia sẻ công thức tuyệt vời! 🔥',
           likes: 892,
           comments: 45,
           timeAgo: '5 giờ trước',
@@ -409,7 +409,7 @@ class StorageService {
             verified: true
           },
           images: ['/community/community-3.jpg'],
-          caption: 'Món Cơm Tấm sườn nướng theo PrepJoy! Sườn nướng thơm lừng, cơm dẻo thơm, chả trứng ngon tuyệt! Cảm ơn PrepJoy đã giúp mình nấu ăn ngon hơn! 🍖 #PrepJoy #ComTam',
+          caption: 'Món Cơm Tấm sườn nướng theo FreshKit! Sườn nướng thơm lừng, cơm dẻo thơm, chả trứng ngon tuyệt! Cảm ơn FreshKit đã giúp mình nấu ăn ngon hơn! 🍖 #FreshKit #ComTam',
           likes: 756,
           comments: 32,
           timeAgo: '8 giờ trước',
@@ -425,7 +425,7 @@ class StorageService {
             verified: false
           },
           images: ['/community/community-4.jpg', '/community/community-5.jpg'],
-          caption: 'Bữa tối hôm nay với món Gỏi Cuốn tôm thịt! Rau tươi, tôm ngọt, thịt mềm, chấm nước mắm chua ngọt. PrepJoy giúp mình có bữa ăn healthy và ngon! 🥗 #PrepJoy #GoiCuon',
+          caption: 'Bữa tối hôm nay với món Gỏi Cuốn tôm thịt! Rau tươi, tôm ngọt, thịt mềm, chấm nước mắm chua ngọt. FreshKit giúp mình có bữa ăn healthy và ngon! 🥗 #FreshKit #GoiCuon',
           likes: 634,
           comments: 28,
           timeAgo: '12 giờ trước',
@@ -441,7 +441,7 @@ class StorageService {
             verified: true
           },
           images: ['/community/community-6.jpg'],
-          caption: 'Món Chả Cá Lã Vọng theo PrepJoy! Cá tươi, nướng thơm, ăn kèm bún tươi và rau thơm. Công thức dễ làm mà ngon không tưởng! 🐟 #PrepJoy #ChaCa',
+          caption: 'Món Chả Cá Lã Vọng theo FreshKit! Cá tươi, nướng thơm, ăn kèm bún tươi và rau thơm. Công thức dễ làm mà ngon không tưởng! 🐟 #FreshKit #ChaCa',
           likes: 923,
           comments: 41,
           timeAgo: '1 ngày trước',
@@ -457,7 +457,7 @@ class StorageService {
             verified: false
           },
           images: ['/community/community-7.jpg'],
-          caption: 'Bánh Xèo tôm thịt theo PrepJoy! Bánh giòn, nhân đầy đặn, chấm nước mắm chua ngọt. Lần đầu làm mà thành công ngay! Cảm ơn PrepJoy! 🥞 #PrepJoy #BanhXeo',
+          caption: 'Bánh Xèo tôm thịt theo FreshKit! Bánh giòn, nhân đầy đặn, chấm nước mắm chua ngọt. Lần đầu làm mà thành công ngay! Cảm ơn FreshKit! 🥞 #FreshKit #BanhXeo',
           likes: 445,
           comments: 19,
           timeAgo: '1 ngày trước',
@@ -473,7 +473,7 @@ class StorageService {
             verified: true
           },
           images: ['/community/community-8.jpg', '/community/community-9.jpg'],
-          caption: 'Món Nem Nướng Nha Trang theo PrepJoy! Nem nướng thơm, bánh tráng giòn, rau tươi, chấm nước mắm đặc biệt. Cả nhà đều thích! 🌯 #PrepJoy #NemNuong',
+          caption: 'Món Nem Nướng Nha Trang theo FreshKit! Nem nướng thơm, bánh tráng giòn, rau tươi, chấm nước mắm đặc biệt. Cả nhà đều thích! 🌯 #FreshKit #NemNuong',
           likes: 1123,
           comments: 67,
           timeAgo: '2 ngày trước',
@@ -489,7 +489,7 @@ class StorageService {
             verified: false
           },
           images: ['/community/community-10.jpg'],
-          caption: 'Món Bún Riêu Cua theo PrepJoy! Nước dùng đậm đà, cua tươi, bún mềm. Công thức chi tiết giúp mình làm được món ngon như ngoài hàng! 🦀 #PrepJoy #BunRieu',
+          caption: 'Món Bún Riêu Cua theo FreshKit! Nước dùng đậm đà, cua tươi, bún mềm. Công thức chi tiết giúp mình làm được món ngon như ngoài hàng! 🦀 #FreshKit #BunRieu',
           likes: 789,
           comments: 35,
           timeAgo: '2 ngày trước',
@@ -505,7 +505,7 @@ class StorageService {
             verified: true
           },
           images: ['/community/community-11.jpg'],
-          caption: 'Món Chè Ba Màu theo PrepJoy! Chè đậu đỏ, đậu xanh, bánh lọt, nước cốt dừa thơm ngon. Món tráng miệng hoàn hảo! 🍧 #PrepJoy #CheBaMau',
+          caption: 'Món Chè Ba Màu theo FreshKit! Chè đậu đỏ, đậu xanh, bánh lọt, nước cốt dừa thơm ngon. Món tráng miệng hoàn hảo! 🍧 #FreshKit #CheBaMau',
           likes: 567,
           comments: 23,
           timeAgo: '3 ngày trước',
@@ -521,7 +521,7 @@ class StorageService {
             verified: false
           },
           images: ['/community/community-12.jpg'],
-          caption: 'Món Cà Phê Sữa Đá theo PrepJoy! Cà phê đậm đà, sữa đặc ngọt, đá lạnh mát. Thức uống hoàn hảo cho buổi sáng! ☕ #PrepJoy #CaPheSuaDa',
+          caption: 'Món Cà Phê Sữa Đá theo FreshKit! Cà phê đậm đà, sữa đặc ngọt, đá lạnh mát. Thức uống hoàn hảo cho buổi sáng! ☕ #FreshKit #CaPheSuaDa',
           likes: 334,
           comments: 15,
           timeAgo: '3 ngày trước',
@@ -551,7 +551,7 @@ class StorageService {
           userId: 1,
           user: 'Phạm Đức Anh',
           avatar: '👨‍🍳',
-          text: 'Tôi cũng đã thử làm theo PrepJoy, rất dễ làm! 👍',
+          text: 'Tôi cũng đã thử làm theo FreshKit, rất dễ làm! 👍',
           timeAgo: '45 phút trước',
           likes: 8,
           createdAt: new Date(Date.now() - 45 * 60 * 1000).toISOString()

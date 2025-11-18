@@ -1,0 +1,335 @@
+.special-offer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.special-offer-modal {
+  background: white;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.offer-header {
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.offer-header h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.offer-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.offer-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.offer-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e53935 0%, #c62828 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  border-color: #e53935;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(229, 57, 53, 0.2);
+}
+
+.offer-card:hover::before {
+  transform: scaleX(1);
+}
+
+.offer-card.selected {
+  border-color: #4CAF50;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.offer-image {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.offer-emoji {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+  z-index: 1;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(229, 57, 53, 0.4);
+  z-index: 2;
+}
+
+.offer-info {
+  text-align: center;
+}
+
+.offer-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.2;
+  min-height: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.offer-prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.original-price {
+  font-size: 0.65rem;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.discounted-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #e53935;
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.added-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  animation: slideUpIndicator 0.3s ease;
+}
+
+@keyframes slideUpIndicator {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.offer-footer {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  background: #fafafa;
+  border-radius: 0 0 20px 20px;
+}
+
+.dismiss-btn {
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dismiss-btn:hover {
+  background: linear-gradient(135deg, #c62828 0%, #b71c1c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 57, 53, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .special-offer-overlay {
+    padding: 1rem;
+  }
+
+  .special-offer-modal {
+    max-height: 95vh;
+  }
+
+  .offer-header {
+    padding: 1.5rem;
+  }
+
+  .offer-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .offer-content {
+    padding: 1rem;
+  }
+
+  .offer-message {
+    font-size: 1rem;
+  }
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .offer-image {
+    height: 80px;
+  }
+
+  .offer-emoji {
+    font-size: 2rem;
+  }
+
+  .offer-name {
+    font-size: 0.8rem;
+    min-height: auto;
+  }
+
+  .discounted-price {
+    font-size: 1rem;
+  }
+
+  .dismiss-btn {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+

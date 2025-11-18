@@ -10,13 +10,16 @@ import Community from './components/Community';
 import MenusPage from './components/MenusPage';
 import RecipesPage from './components/RecipesPage';
 import Partners from './components/Partners';
+import CartPage from './components/CartPage';
 import Footer from './components/Footer';
+import ToastContainer from './components/ToastContainer';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/gioi-thieu" element={<About />} />
@@ -26,6 +29,7 @@ function App() {
           <Route path="/doi-tac" element={<Partners />} />
           <Route path="/recipes" element={<RecipesPage />} />
           <Route path="/plans" element={<Plans />} />
+          <Route path="/gio-hang" element={<CartPage />} />
         </Routes>
         <Footer />
       </div>
