@@ -217,21 +217,24 @@ const CartPage = () => {
                   </label>
 
                   <div className="item-image">
-                    <span className="item-emoji">{item.image}</span>
+                    {item.image && (item.image.startsWith('/') || item.image.includes('.jpg') || item.image.includes('.webp') || item.image.includes('.png')) ? (
+                      <img 
+                        src={item.image} 
+                        alt={item.name} 
+                        className="item-img"
+                        onError={(e) => {
+                          console.error('Image failed to load:', item.image, 'for item:', item.name);
+                          // Fallback to emoji if image fails to load
+                          e.target.style.display = 'none';
+                        }}
+                      />
+                    ) : (
+                      <span className="item-emoji">{item.image || '🍽️'}</span>
+                    )}
                   </div>
 
                   <div className="item-info">
                     <h3 className="item-name">{item.name}</h3>
-                    <p className="item-description">{item.description}</p>
-                    <div className="item-meta">
-                      {item.diet && item.diet.length > 0 && (
-                        <div className="item-diet">
-                          {item.diet.map((diet, index) => (
-                            <span key={index} className="diet-badge">{diet}</span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
                   </div>
 
                   <div className="item-price">
