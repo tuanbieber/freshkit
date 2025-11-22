@@ -620,7 +620,7 @@ const MenusPage = () => {
       category: 'Nước ép',
       description: 'Nước ép cam nguyên chất 100%',
       price: 35000,
-      image: '🧃',
+      image: '/menu/nuoc_ep_cam_tuoi.webp',
       type: 'juice'
     },
     {
@@ -629,7 +629,7 @@ const MenusPage = () => {
       category: 'Nước ép',
       description: 'Nước ép táo tươi ngon',
       price: 35000,
-      image: '🧃',
+      image: '/menu/nuoc_ep_tao.webp',
       type: 'juice'
     },
     {
@@ -638,7 +638,7 @@ const MenusPage = () => {
       category: 'Nước ép',
       description: 'Nước ép dưa hấu mát lạnh',
       price: 30000,
-      image: '🧃',
+      image: '/menu/nuoc_ep_dua_hau.webp',
       type: 'juice'
     },
     {
@@ -647,7 +647,7 @@ const MenusPage = () => {
       category: 'Trái cây',
       description: 'Hộp trái cây mix tươi ngon',
       price: 80000,
-      image: '🍎',
+      image: '/menu/trai_cay_mix.jpg',
       type: 'fruit'
     },
     {
@@ -656,7 +656,7 @@ const MenusPage = () => {
       category: 'Trái cây',
       description: 'Dưa hấu tươi ngon',
       price: 45000,
-      image: '🍉',
+      image: '/menu/dua_hau.webp',
       type: 'fruit'
     },
     {
@@ -665,7 +665,7 @@ const MenusPage = () => {
       category: 'Trái cây',
       description: 'Chuối chín vàng',
       price: 25000,
-      image: '🍌',
+      image: '/menu/chuoi.png',
       type: 'fruit'
     },
     {
@@ -674,7 +674,7 @@ const MenusPage = () => {
       category: 'Sinh tố',
       description: 'Sinh tố bơ béo ngậy',
       price: 40000,
-      image: '🥑',
+      image: '/menu/sinh_to_bo.webp',
       type: 'smoothie'
     },
     {
@@ -683,7 +683,7 @@ const MenusPage = () => {
       category: 'Sinh tố',
       description: 'Sinh tố dâu tây thơm ngon',
       price: 45000,
-      image: '🥤',
+      image: '/menu/sinh_to_dau.jpg',
       type: 'smoothie'
     }
   ];
